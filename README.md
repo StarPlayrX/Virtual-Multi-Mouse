@@ -23,11 +23,14 @@ Updated to work with MisterB's first_script.sh
 **News**
 Designed to work with Mister B's first_script.sh, we've include a version that is optimized for Multi Mouse 1.0
 
+
 **Directions**
 Copy custom.sh script to an ExFat partition and attach it to your Batocera machine.
 `press F1`
+
 Copy and Paste this script directly inside your /userdata/system/ folder
 `press F4`
+
 
 **type**
 `ls -a`
