@@ -32,7 +32,7 @@ Copy and Paste this script directly inside your /userdata/system/ folder
 `press F4`
 
 
-**type**
+type
 
 `ls -a`
 
