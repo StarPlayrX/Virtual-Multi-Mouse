@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#
 #  first_script.sh
 #  log reader plugin for multi_mouse.sh
 #
