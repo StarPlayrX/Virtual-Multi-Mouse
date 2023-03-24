@@ -1,15 +1,18 @@
 # Multi-Mouse (MM) 🐭👾🖲️
 
 For Batocera v35 or later
+
 **Root Folder**
+
 /userdata/system/
+
 **Script Name**
 custom.sh
 
 ## Auto configures Trackball, Spinner, Mouse, Trackpad into only device for Batocera with RetroArch
 
-**Introducing Multi Mouse**
-MM is the  auto-magic solution for combining multiple mouse inputs into a single virtual device
+**Multi Mouse**
+MM is the auto-magic solution for combining multiple mouse inputs into a single virtual device
 
 **Features**
 Supports any number of event mice 2 or more
