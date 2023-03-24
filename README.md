@@ -19,9 +19,7 @@ Like Batocera, it's plug and play.
 Add or remove a usb mouse, trackball or spinner?
 Simple reboot or with first_script.sh installed, Restart the game.
 
-Designed to work with MizterB's first_script.sh.
-We've special version that's optimized for MM.
-
+Designed to work with MizterB's first_script.sh. We've special version that's optimized for MM.
 
 
 **Instructions**
