@@ -7,6 +7,15 @@
 #  Updated to work with Multi Mouse 1.0.1
 #
 
+# On Batocera v35 or later place first_script.sh in:
+# /userdata/system/configs/emulationstation/scripts/game-start/
+# you will have to create /scripts and /game-start directories manually
+# cd /userdata/system/configs/emulationstation/scripts/game-start/
+# chmod ./first_script.sh
+
+# see
+# https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index/10
+
 # NAME OF DESIRED MOUSE INPUT
 mouse_name="01A_Multi_Mouse"
 
