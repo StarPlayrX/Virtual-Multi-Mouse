@@ -33,6 +33,7 @@ Copy and Paste this script directly inside your /userdata/system/ folder
 
 
 **type**
+
 `ls -a`
 
 `chmod 755 ./custom.sh`
