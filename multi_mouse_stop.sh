@@ -7,10 +7,7 @@
 #  Auto Config
 #
 #  Created by StarPlayrX / Todd Bruss on 2023/03/23
-#  GNU General Public License, Free for anyone to use
 #  Zero Config, no adjustments to this script are necessary
-#
-#  Tested on Batocera v35
 #
 
 # variables
