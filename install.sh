@@ -1,12 +1,11 @@
 #!/bin/bash
 
+#
 #  install.sh
 #  Multi-Mouse installer script
 #
 #  Created by StarPlayrX | Todd Bruss on 3/24/23.
 #  
-
-# remove previous if they exist
 
 dir="/userdata/system/"
 scripts='/scripts/'
