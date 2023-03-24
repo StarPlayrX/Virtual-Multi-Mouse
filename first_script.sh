@@ -10,6 +10,7 @@
 # On Batocera v35 or later place first_script.sh in:
 # /userdata/system/configs/emulationstation/scripts/game-start/
 # you will have to create /scripts and /game-start directories manually
+# an installer script is coming soon to make this much easier 
 # cd /userdata/system/configs/emulationstation/scripts/game-start/
 # chmod ./first_script.sh
 
