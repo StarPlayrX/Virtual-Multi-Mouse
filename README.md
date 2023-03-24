@@ -21,8 +21,7 @@ Runs in the background using a sub shell
 Updated to work with MisterB's first_script.sh
 
 **News**
-Designed to work with Mister B's first_script.sh
-https://github.com/StarPlayrX/Multi-Mouse
+Designed to work with Mister B's first_script.sh, we've include a version that is optimized for Multi Mouse 1.0
 
 **Directions**
 Copy custom.sh script to an ExFat partition and attach it to your Batocera machine.
