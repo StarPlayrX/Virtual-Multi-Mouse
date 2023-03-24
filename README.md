@@ -1,10 +1,8 @@
 # Multi-Mouse (MM) 🐭👾🖲️
 
 For Batocera v35 or later
-
 **Root Folder**
 /userdata/system/
-
 **Script Name**
 custom.sh
 
