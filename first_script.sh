@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #  first_script.sh
-#  log reader added on for multi_mouse.sh
+#  log reader plugin for multi_mouse.sh
 #
 #  Updated to work with Multi Mouse 1.0.2
 #  Created by StarPlayrX on 2023.03.24
