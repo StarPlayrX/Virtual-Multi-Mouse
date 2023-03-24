@@ -3,7 +3,7 @@
 #
 #  custom.sh
 #
-#  Multi Mouse v1.0
+#  Multi Mouse v1.0.1
 #  Auto Config
 #
 #  Created by StarPlayrX / Todd Bruss on 2023/03/23
