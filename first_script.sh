@@ -3,23 +3,9 @@
 #  first_script.sh
 #  log reader added on for multi_mouse.sh
 #
-#  Updated to work with Multi Mouse 1.0.2 by StarPlayrX on 2023.03.24
+#  Updated to work with Multi Mouse 1.0.2
+#  Created by StarPlayrX on 2023.03.24
 #
-
-# On Batocera v35 or later place first_script.sh in:
-# /userdata/system/scripts/
-# you will have to create /scripts directories manually
-# an installer script is coming soon to make this much easier
-# press [F1] to open file manager gui on Batocera
-# press [F4] to open terminal on Batocera
-# cd /userdata/system/scripts/
-# mkdir scripts
-# cd scripts
-# exit
-# copy first_script.sh to /scripts folder
-# [F4] to enter terminal again
-# chmod ./first_script.sh
-# reboot
 
 # see
 # https://wiki.batocera.org/launch_a_script
@@ -40,6 +26,9 @@ mmlog='/tmp/multi_mouse.log'
 $cmd global.retroarch.dir $dir
 $cmd global.retroarch.log_to_file true
 $cmd global.retroarch.log_to_file_timestamp false
+
+# do this on a delay (let's retroarch start first)
+sleep 1
 
 # extract mouse index from log file
 index=$(awk -F'[:"]' -v name="${mouse_name}" '/Mouse #/ && $4==name {print $2; found=1} END{if (!found) exit 1}' "${dir}${log}")
