@@ -29,8 +29,8 @@ Add or remove a usb mouse, trackball or spinner?
 Reboot or with first_script.sh, Restart the game
 
 **News**
-Designed to work with Mister B's first_script.sh
-The repo includes a special version that's optimized for MM
+Designed to work with MizterB's first_script.sh
+We've special version that's optimized for MM
 
 **Directions**
 Copy custom.sh script to an ExFat partition and attach it to your Batocera machine.
