@@ -3,7 +3,7 @@
 #
 #  multi_mouse_stop.sh
 #
-#  Multi Mouse v1.0.2
+#  Multi-Mouse v1.0.2
 #  Auto Config
 #
 #  Created by StarPlayrX / Todd Bruss on 2023/03/23
