@@ -1,6 +1,10 @@
 # Multi-Mouse (MM) 🐭👾🖲️
 ## For Batocera v35 or later
 
+🚧🚧🚧 Version 1.0.2 is now under construction 🚧🚧🚧
+
+We will let you know when 1.0.2 has been tested and ready for production. We are adding an install script plus be managed scripts based on Batocera's documentation.
+
 **Root Folder**
 /userdata/system/
 
