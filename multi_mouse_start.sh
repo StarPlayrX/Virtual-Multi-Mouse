@@ -7,6 +7,7 @@
 #  Auto Config
 #
 #  Created by StarPlayrX / Todd Bruss on 2023/03/23
+#  Zero Config, no adjustments to this script are necessary
 #
 
 # variables
