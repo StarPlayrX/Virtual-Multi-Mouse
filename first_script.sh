@@ -13,7 +13,7 @@
 #!/bin/bash
 
 # variables
-mouse_name='01A_Multi_Mouse'
+mouse='01A_Multi_Mouse'
 dir='/userdata/system/logs/'
 log='retroarch.log'
 cmd='batocera-settings-set'
@@ -31,7 +31,7 @@ $cmd global.retroarch.log_to_file_timestamp false
 sleep 1
 
 # extract mouse index from log file
-index=$(awk -F'[:"]' -v name="${mouse_name}" '/Mouse #/ && $4==name {print $2; found=1} END{if (!found) exit 1}' "${dir}${log}")
+index=$(awk -F'[:"]' -v name="${mouse}" '/Mouse #/ && $4==name {print $2; found=1} END{if (!found) exit 1}' "${dir}${log}")
 
 # check if we can extract the mouse index from the file
 if [ $? -ne 0 ]
@@ -49,7 +49,6 @@ else
     echo "${err}" >> $mmlog
     exit 1
 fi
-
 
 # Case selection for first parameter parsed, our event.
 case $1 in
