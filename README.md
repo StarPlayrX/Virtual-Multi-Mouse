@@ -11,7 +11,7 @@ custom.sh
 
 MM is the auto-magic solution for combining multiple mouse inputs into a single virtual device. Supports any number of event mice 2 or more. Combines spinner, trackball, mouse, trackpad, and other pointing devices. Requires no editing. Minimal installation. An installer script is coming soon!
 
-**Get Ready Player One**
+**Get Ready Player One**:
 No hard encoded, hard to type, a pain to copy event-mouse names, MM hunts them down for you.
 No editing after you swap out new mouse devices.
 No guessing to what the multi-mouse index should be.
