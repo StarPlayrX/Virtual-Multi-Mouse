@@ -4,7 +4,7 @@
 #  multi_mouse_stop.sh
 #
 #  Multi Mouse v1.0.2
-#  stop script
+#  Auto Config
 #
 #  Created by StarPlayrX / Todd Bruss on 2023/03/23
 #  GNU General Public License, Free for anyone to use
