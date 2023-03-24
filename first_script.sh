@@ -7,7 +7,7 @@
 #  Created by StarPlayrX on 2023.03.24
 #
 
-# see
+# reference
 # https://wiki.batocera.org/launch_a_script
 
 #!/bin/bash
