@@ -21,17 +21,19 @@ Simply reboot or with MizterB's first_script.sh installed, Restart the game. Plu
 
 **Instructions**
 
-Copy custom.sh script to an ExFat partition and attach it to your Batocera machine.
+1. Copy custom.sh script to an ExFat partition and attach it to your Batocera machine.
 `press F1`
 
-Copy and Paste this script directly inside your /userdata/system/ folder
+2. Copy and Paste this script directly inside your /userdata/system/ folder
 `press F4`
 
 
-type
+3. type
 
 `ls -a`
 
 `chmod 755 ./custom.sh`
 
 `reboot`
+
+4. See first_script.sh for optional mouse-index optmization
