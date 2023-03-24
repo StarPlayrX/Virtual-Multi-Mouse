@@ -10,10 +10,6 @@
 #  GNU General Public License, Free for anyone to use
 #  Zero Config, no adjustments to this script are necessary
 #
-#  Tested on Batocera v35
-#
-#  place this bash script in /userdata/system/
-#  chmod 755 /userdata/system/custom.sh
 
 # variables
 script='custom.sh'
