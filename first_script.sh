@@ -10,9 +10,19 @@
 # On Batocera v35 or later place first_script.sh in:
 # /userdata/system/configs/emulationstation/scripts/game-start/
 # you will have to create /scripts and /game-start directories manually
-# an installer script is coming soon to make this much easier 
-# cd /userdata/system/configs/emulationstation/scripts/game-start/
+# an installer script is coming soon to make this much easier
+# press [F1] to open file manager gui on Batocera
+# press [F4] to open terminal on Batocera
+# cd /userdata/system/configs/emulationstation/
+# mkdir scripts
+# cd scripts
+# mkdir game-start
+# cd game-start
+# exit
+# copy first_script.sh to /game-start folder
+# [F4] to enter terminal again
 # chmod ./first_script.sh
+# reboot
 
 # see
 # https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index/10
