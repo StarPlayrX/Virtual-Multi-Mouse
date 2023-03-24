@@ -1,4 +1,4 @@
-# Multi-Mouse (MM) 🐭👾🖲️
+# Multi-Mouse MM 🐭👾🖲️
 ## For Batocera v35 or later
 
 🚧🚧🚧 Version 1.0.2 is now under construction, please stand by 🚧🚧🚧
