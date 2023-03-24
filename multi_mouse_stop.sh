@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #
-#  custom.sh
+#  multi_mouse_stop.sh
 #
-#  Multi Mouse v1.0.1
-#  Auto Config
+#  Multi Mouse v1.0.2
+#  stop script
 #
 #  Created by StarPlayrX / Todd Bruss on 2023/03/23
 #  GNU General Public License, Free for anyone to use
@@ -12,8 +12,6 @@
 #
 #  Tested on Batocera v35
 #
-#  place this bash script in /userdata/system/
-#  chmod 755 /userdata/system/custom.sh
 
 # variables
 dest='/dev/input/by-id/'
