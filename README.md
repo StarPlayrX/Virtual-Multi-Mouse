@@ -12,8 +12,7 @@ MM is the auto-magic solution for combining multiple mouse inputs into a single 
 Get Ready Player One!
 No hard encoded, hard to type event-mouse names. MM will hunt them down for you.
 No editing after you swap out new mouse devices.
-No guessing to what the multi-mouse index should be.
-No need to configure mouse inputs for a single 1 player game.
+No need to configure the mouse input for a single 1 player game.
 
 Like Batocera, it's plug and play.
 Add or remove a usb mouse, trackball or spinner?
