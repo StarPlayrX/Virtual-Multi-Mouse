@@ -25,12 +25,13 @@ Designed to work with MizterB's first_script.sh.
 We've special version that's optimized for MM.
 
 
-**Directions**
 
-Copy custom.sh script to an ExFat partition and attach it to your Batocera machine.
+**Instructions**
+
+###Copy custom.sh script to an ExFat partition and attach it to your Batocera machine.
 `press F1`
 
-Copy and Paste this script directly inside your /userdata/system/ folder
+###Copy and Paste this script directly inside your /userdata/system/ folder
 `press F4`
 
 
