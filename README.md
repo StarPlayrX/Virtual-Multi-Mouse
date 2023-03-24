@@ -31,4 +31,4 @@ Like Batocera, it's plug and play. Need to add or remove a usb mouse, trackball 
 
 `reboot`
 
-4. See first_script.sh for optional mouse-index optmization
+4. See first_script.sh for optional mouse-index optimization
