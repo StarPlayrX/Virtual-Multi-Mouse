@@ -16,7 +16,7 @@ No need to configure the mouse input for a single 1 player game.
 
 Like Batocera, it's plug and play.
 Add or remove a usb mouse, trackball or spinner?
-Simply reboot or with MizterB's first_script.sh installed, Restart the game. Plus we've created a special version of first_script that's designed to work with MM.
+Simply reboot or with the optional MizterB's first_script.sh installed, Restart the game. Plus we've created a special version of first_script that's designed to work with MM.
 
 
 **Instructions**
