@@ -10,5 +10,3 @@ Get Ready Player One. No hard encoded, hard to type event-mouse names. MM will h
 Like Batocera, it's plug and play. Need to add or remove a usb mouse, trackball or spinner? Simply reboot or restart your game.
 
 install.sh script will make it easy to move your devices to a clean install of Batocera.
-
-🚧🚧🚧 Version 1.0.2 is now under construction, please stand by 🚧🚧🚧
