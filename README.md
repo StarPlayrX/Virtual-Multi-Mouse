@@ -7,7 +7,7 @@
 **Script Name**
 custom.sh
 
-MM is the auto-magic solution for combining multiple mouse inputs into a single virtual device. Supports any number of event mice 2 or more. Combines spinner, trackball, mouse, trackpad and other pointing devices. Requires no editing. Minimal installation. An installer script is coming soon!
+MM is the auto-magic solution for combining multiple mouse inputs into a single virtual device. Supports any number of event mice of 2 or more. Combines spinner, trackball, mouse, trackpad and other pointing devices. Requires no editing. Minimal installation. An installer script is coming soon!
 
 Get Ready Player One!
 No hard encoded, hard to type event-mouse names. MM will hunt them down for you.
@@ -17,9 +17,7 @@ No need to configure mouse inputs for a single 1 player game.
 
 Like Batocera, it's plug and play.
 Add or remove a usb mouse, trackball or spinner?
-Simply reboot or with first_script.sh installed, Restart the game.
-
-Designed to work with MizterB's first_script.sh. We've special version that's optimized for MM.
+Simply reboot or with MizterB's first_script.sh installed, Restart the game. Plus we've special version of first_script that's designed to work with MM.
 
 
 **Instructions**
