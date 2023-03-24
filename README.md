@@ -18,16 +18,19 @@ No editing after you swap out new mouse devices.
 No guessing to what the multi-mouse index should be.
 No need to configure mouse inputs for a single 1 player game ever.
 
+
 **Details**
 
 Like Batocera, it's plug and play.
 Add or remove a usb mouse, trackball or spinner?
 Reboot or with first_script.sh, Restart the game.
 
+
 **News**
 
 Designed to work with MizterB's first_script.sh.
 We've special version that's optimized for MM.
+
 
 **Directions**
 
