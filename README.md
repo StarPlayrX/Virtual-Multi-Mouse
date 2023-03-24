@@ -22,10 +22,10 @@ Simply reboot or with MizterB's first_script.sh installed, Restart the game. Plu
 **Instructions**
 
 1. Copy custom.sh script to an ExFat partition and attach it to your Batocera machine.
-`press F1`
+`press F1 to enter the desktop gui`
 
-2. Copy and Paste this script directly inside your /userdata/system/ folder
-`press F4`
+2. Navigate to /userdata/system/. Copy and Paste this script directly inside the system folder
+`press F4 to enter the terminal`
 
 
 3. type
