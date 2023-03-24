@@ -10,10 +10,6 @@
 #  GNU General Public License, Free for anyone to use
 #  Zero Config, no adjustments to this script are necessary
 #
-#  Tested on Batocera v35
-#
-#  place this bash script in /userdata/system/
-#  chmod 755 /userdata/system/custom.sh
 
 # variables
 script='custom.sh'
@@ -41,13 +37,13 @@ then
 fi
  
 # count event_mouse instances, this becomes our multi_mouse_index
-mmi=$(ls -a | grep -c mouse)
+mi=$(ls -a | grep -c mouse)
 
 # set retroarch player one global index to our new multi mouse
 batocera-settings-set global.retroarch.input_player1_mouse_index $mmi
 
 # update log
-echo "[INFO] [udev]: Mouse #${mmi}: "${mm}" (REL) /dev/input/eventMM" > $userdata$dir$log
+echo "[INFO] [udev]: Mouse #${mi}: "${mm}" (REL) /dev/input/eventMM" > $userdata$dir$log
 
 # gather all event mouse names
 event_mouse=( $(ls -a | grep mouse) )
