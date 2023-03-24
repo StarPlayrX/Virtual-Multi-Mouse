@@ -1,10 +1,9 @@
 #!/bin/bash
 
 #  first_script.sh
-#  log_scraper
+#  log reader added on for multi_mouse.sh
 #
-#  Created by MizterB on 11/30/22.
-#  Updated to work with Multi Mouse 1.0.1
+#  Updated to work with Multi Mouse 1.0.2 by StarPlayrX on 2023.03.24
 #
 
 # On Batocera v35 or later place first_script.sh in:
@@ -16,19 +15,56 @@
 # see
 # https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index/10
 
-# NAME OF DESIRED MOUSE INPUT
-mouse_name="01A_Multi_Mouse"
+#!/bin/bash
 
-# log file must be enabled
-batocera-settings-set global.retroarch.log_dir "/userdata/system/logs/"
-batocera-settings-set global.retroarch.log_to_file true
-batocera-settings-set global.retroarch.log_to_file_timestamp false
+# variables
+mouse_name='01A_Multi_Mouse'
+dir='/userdata/system/logs/'
+log='retroarch.log'
+cmd='batocera-settings-set'
+input='global.retroarch.input_player1_index'
+err='Error: mouse not found'
+ext='Error: could not extract mouse index from log file'
+mmlog='/tmp/multi_mouse.log'
 
-# mouse index
-mouse_index=$(sed -En "s~.*Mouse #(.*): \"$mouse_name\".*~\1~p" /userdata/system/logs/retroarch.log | tail -1)
-if [[ -z "$mouse_index" ]]; then
-	echo mouse_not_found
-else 
-	echo mouse_found on index: $mouse_index
-	batocera-settings-set global.retroarch.input_player1_mouse_index $mouse_index
+# enable log file
+$cmd global.retroarch.dir $dir
+$cmd global.retroarch.log_to_file true
+$cmd global.retroarch.log_to_file_timestamp false
+
+# extract mouse index from log file
+index=$(awk -F'[:"]' -v name="${mouse_name}" '/Mouse #/ && $4==name {print $2; found=1} END{if (!found) exit 1}' "${dir}${log}")
+
+# check if we can extract the mouse index from the file
+if [ $? -ne 0 ]
+then
+    echo "${ext}" >> $mmlog
+    exit 1
 fi
+
+# check if mouse index is found
+if [ -n "${index}" ]
+then
+    echo "multi-mouse success: ${cmd} ${input} ${index}" >> $mmlog
+    $cmd $input $index
+else
+    echo "${err}" >> $mmlog
+    exit 1
+fi
+
+
+# Case selection for first parameter parsed, our event.
+case $1 in
+    gameStart)
+        # Commands in here will be executed on the start of any game.
+        echo "Game Start" > $mmlog
+        echo "$@" >> $mmlog
+        echo "Multi Mouse found on index: ${index}" >> $mmlog
+    ;;
+    gameStop)
+        # Commands here will be executed on the stop of every game.
+        echo "Game End" >> $mmlog
+        echo "Multi Mouse found on index: ${index}" >> $mmlog
+    ;;
+esac
+
