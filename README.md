@@ -28,10 +28,10 @@ We've special version that's optimized for MM.
 
 **Instructions**
 
-###Copy custom.sh script to an ExFat partition and attach it to your Batocera machine.
+Copy custom.sh script to an ExFat partition and attach it to your Batocera machine.
 `press F1`
 
-###Copy and Paste this script directly inside your /userdata/system/ folder
+Copy and Paste this script directly inside your /userdata/system/ folder
 `press F4`
 
 
