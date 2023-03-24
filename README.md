@@ -9,9 +9,7 @@ For Batocera v35 or later
 **Script Name**
 custom.sh
 
-MM is the auto-magic solution for combining multiple mouse inputs into a single virtual device.
-
-Supports any number of event mice 2 or more. Combines spinner, trackball, mouse, trackpad, and other pointing devices.
+MM is the auto-magic solution for combining multiple mouse inputs into a single virtual device. Supports any number of event mice 2 or more. Combines spinner, trackball, mouse, trackpad, and other pointing devices. Requires no editing. Minimal installation. An installer script is coming soon!
 
 **Get Ready Player One**
 No hard encoded, hard to type, a pain to copy event-mouse names, MM hunts them down for you.
