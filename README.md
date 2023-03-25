@@ -20,10 +20,10 @@ Like Batocera, it's plug and play. Need to change your hardware configuration? S
 2.  Format it using ExFat, call it install
 3.  Copy the MM folder to the thumb drive
 4.  Insert the thumb drive to your Batocera Linux box
-5.  cd /media/install/MM
-6.  chmod 755 ./install.sh
-7.  ./install.sh -install
-8.  reboot
-
+5.  `cd /media/install/MM`
+6.  `chmod 755 ./install.sh`
+7.  `./install.sh -install`
+8.  `reboot`
+9.  Enjoy!
 
 
