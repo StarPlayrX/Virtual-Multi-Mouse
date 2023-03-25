@@ -39,7 +39,7 @@ fi
 mi=$(ls -a | grep -c mouse)
 
 # set retroarch player one global index to our new multi mouse
-batocera-settings-set global.retroarch.input_player1_mouse_index $mmi
+batocera-settings-set global.retroarch.input_player1_mouse_index $mi
 
 # update log
 echo "[INFO] [udev]: Mouse #${mi}: "${mm}" (REL) /dev/input/eventMM" > $userdata$dir$log

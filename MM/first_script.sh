@@ -24,6 +24,7 @@ ext='Error: could not extract mouse index from log file'
 mmlog='/tmp/multi_mouse.log'
 
 # enable log file
+echo enabling log file
 $cmd global.retroarch.dir $dir
 $cmd global.retroarch.log_to_file true
 $cmd global.retroarch.log_to_file_timestamp false
@@ -31,20 +32,17 @@ $cmd global.retroarch.log_to_file_timestamp false
 # do this on a delay (let's retroarch start first)
 sleep 1
 
+echo extracting index
 # extract mouse index from log file
-index=$(awk -F'[:"]' -v name="${mouse}" '/Mouse #/ && $4==name {print $2; found=1} END{if (!found) exit 1}' "${dir}${log}")
+mouse_str=$(awk -F'[:"]' -v name="${mouse}" '/Mouse #/ && $4==name {print $2; found=1} END{if (!found) echo err}' "${dir}${log}")
 
-# check if we can extract the mouse index from the file
-if [ $? -ne 0 ]
-then
-    echo "${ext}" >> $mmlog
-    exit 1
-fi
+index=$(echo $mouse_str | awk -F'#' '{print $2}')
 
-# check if mouse index is found
+echo check if mouse index is found
 if [ -n "${index}" ]
 then
     echo "multi-mouse success: ${cmd} ${input} ${index}" >> $mmlog
+	echo $cmd $input $index
     $cmd $input $index
 else
     echo "${err}" >> $mmlog
@@ -54,15 +52,17 @@ fi
 # Case selection for first parameter parsed, our event.
 case $1 in
     gameStart)
-        # Commands in here will be executed on the start of any game.
+        echo Commands in here will be executed on the start of any game.
         echo "Game Start" > $mmlog
         echo "$@" >> $mmlog
         echo "Multi Mouse found on index: ${index}" >> $mmlog
     ;;
     gameStop)
-        # Commands here will be executed on the stop of every game.
+        echo Commands here will be executed on the stop of every game.
         echo "Game End" >> $mmlog
         echo "Multi Mouse found on index: ${index}" >> $mmlog
     ;;
+	*) 
+		echo Usage $0  gameStart  gameStop
+	;;
 esac
-

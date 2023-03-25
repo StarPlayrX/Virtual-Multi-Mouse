@@ -8,7 +8,7 @@
 #  
 
 dir="/userdata/system/"
-scripts='/scripts/'
+scripts='scripts/'
 custom='custom.sh'
 first='first_script.sh'
 start='multi_mouse_start.sh'
@@ -16,26 +16,33 @@ stop='multi_mouse_stop.sh'
 
 case "$1" in
     -install)
-        # install
-        mdir $dir$scripts
-        rm $dir$custom
-        rm $dir$start
-        rm $dir$stop
+        echo install
+        mkdir $dir$scripts
+        rm -f $dir$custom
+        rm -f $dir$start
+        rm -f $dir$stop
+		rm -f $dir$scripts$first
         cp ./$custom $dir$custom
         cp ./$start $dir$start
         cp ./$stop $dir$stop
         cp ./$first $dir$scripts$first
+		echo install complete
         ;;
     -uninstall)
-        # uninstall
+		echo uninstall
         rm $dir$custom
         rm $dir$start
         rm $dir$stop
+		rm $dir$scripts$first
+		echo uninstall complete
         ;;
     -restart)
+		echo reboot
         reboot
         ;;
       *)
-        echo "Usage: $0 {-install|-uninstall|-restart}"
+		echo ""
+        echo "Usage: $0  -install  -uninstall  -restart"
+		echo ""
       ;;
 esac
