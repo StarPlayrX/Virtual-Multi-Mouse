@@ -1,8 +1,8 @@
 # 🐭👾🖲️ Multi-Mouse
 
-## For Batocera v35 or later with RetroArch
+### For Batocera v35 or later with RetroArch
 
-### Get Ready Player One!
+# Get Ready Player One!
 
 ## Take full control over your trackballs, spinners and other pointing devices
 
