@@ -1,11 +1,10 @@
 # 🐭👾🖲️ Multi-Mouse
 
-# Get Ready Player One!
+## For Batocera v35 or later with RetroArch
+
+### Get Ready Player One!
 
 ## Take full control over your trackballs, spinners and other pointing devices
-
-### For Batocera v35 or later with RetroArch
-
 
 🐭👾🖲️ MM 1.0.2 now available!
 
