@@ -6,7 +6,7 @@ MM is the magic solution for combining multiple mouse inputs into a single virtu
 
 Get ready player one. No hard encoded, hard to type event-mouse names. MM will hunt them down for you making the setup ultra easy. There's no editing after you swap out new mouse, trackball or spinner. No need to configure the mouse input for a single 1 player game.
  
-Like Batocera it's plug and play. Need to change your hardware configuration? Simply reboot or restart your game. Note: some USB cards or ports work better after a reboot. If using a 2008 - 2012 Mac Pro with Batocera and Multi-Mouse, recommend plugging your devices on built in USB ports rather than PCIe cards. While Multi-Mouse tries to make everthing hot-swappable, it's recommended to leave your mouse devices alone unless it's between reboots.
+Like Batocera it's plug and play. Need to change your hardware configuration? Simply reboot or restart your game. Multi-Mouse will also be hotswappable in the near future.
 
 ## 🐭👾🖲️ Easy installation
 
