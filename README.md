@@ -25,6 +25,6 @@ Like Batocera it's plug and play. Need to change your hardware configuration? Si
 ## 🐭👾🖲️ Credits
 
 * MM 1.0.3 StarPlayrX | Todd Bruss
-* based on previous sswork by MizterB
+* based on previous work by MizterB
 * Special thanks to the Batocera team
 * Shout out to the RetroArch team
