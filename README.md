@@ -1,4 +1,4 @@
-# Multi-Mouse MM 🐭👾🖲️
+# 🐭👾🖲️ Multi-Mouse 
 
 ## Take full control over your trackballs, spinners and other pointing devices
 
