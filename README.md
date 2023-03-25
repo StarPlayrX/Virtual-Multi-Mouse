@@ -1,4 +1,4 @@
-# 🐭👾🖲️ Multi-Mouse MM
+# 🐭👾🖲️ Multi-Mouse MM 1.0.2
 
 ## Take full control over your trackballs, spinners and other pointing devices
 
