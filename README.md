@@ -16,7 +16,7 @@ Like Batocera, it's plug and play. Need to change your hardware configuration? S
 
 🐭👾🖲️ Easy installation 🐭👾🖲️
 
-1.  Insert a Thumb Drive
+1.  Insert a thumb drive
 2.  Format it using ExFat, call it install
 3.  Copy the MM folder to the thumb drive
 4.  Insert the thumb drive to your Batocera Linux box
