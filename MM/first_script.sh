@@ -2,10 +2,12 @@
 
 #
 #  first_script.sh
-#  log reader plugin for multi_mouse.sh
 #
-#  Updated to work with Multi Mouse 1.0.2
-#  Created by StarPlayrX on 2023.03.24
+#  Multi-Mouse
+#
+#  MM 1.0.3
+#
+#  Created by StarPlayrX | Todd Bruss on 2023.03.25
 #
 
 # reference
@@ -18,14 +20,14 @@ mouse='01A_Multi_Mouse'
 dir='/userdata/system/logs/'
 log='retroarch.log'
 cmd='batocera-settings-set'
-input='global.retroarch.input_player1_index'
+input='global.retroarch.input_player1_mouse_index'
 err='Error: mouse not found'
 ext='Error: could not extract mouse index from log file'
 mmlog='/tmp/multi_mouse.log'
 
 # enable log file
 echo enabling log file
-$cmd global.retroarch.dir $dir
+$cmd global.retroarch.log_dir $dir
 $cmd global.retroarch.log_to_file true
 $cmd global.retroarch.log_to_file_timestamp false
 

@@ -3,15 +3,15 @@
 #
 #  multi_mouse_start.sh
 #
-#  Multi Mouse v1.0.2
-#  Auto Config
+#  Multi-Mouse
 #
-#  Created by StarPlayrX / Todd Bruss on 2023/03/23
-#  Zero Config, no adjustments to this script are necessary
+#  MM 1.0.3
+#
+#  Created by StarPlayrX | Todd Bruss on 2023.03.25
 #
 
 # variables
-script='custom.sh'
+script='multi_mouse_start.sh'
 input='--input'
 dest='/dev/input/by-id/'
 userdata='/userdata/system/'
