@@ -1,11 +1,11 @@
-# 🐭👾🖲️ Multi-Mouse MM 1.0.2
+# 🐭👾🖲️ Multi-Mouse
 
 ## Take full control over your trackballs, spinners and other pointing devices
 
 ### For Batocera v35 or later with RetroArch
 
 
-🐭👾🖲️ MM version 1.0.2 is now available!
+🐭👾🖲️ MM 1.0.2 now available!
 
 
 MM is the auto-magic solution for combining multiple mouse inputs into a single virtual device. Supports any combination of spinners trackball, mouse or trackpads. We made Multi-Mouse, so you can just play. Requires no editing. MM is designed to configure itself as one device.
