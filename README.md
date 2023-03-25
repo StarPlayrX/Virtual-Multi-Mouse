@@ -14,7 +14,7 @@ Get ready player one. No hard encoded, hard to type event-mouse names. MM will h
 
 Like Batocera, it's plug and play. Need to change your hardware configuration? Simply reboot or restart your game.
 
-Easy installation.
+🐭👾🖲️ Easy installation 🐭👾🖲️
 
 1.  Insert a Thumb Drive
 2.  Format it using ExFat, call it install
