@@ -4,7 +4,7 @@ Auto configures Trackball, Spinner, Mouse, Trackpad into one virtual device for 
 
 For Batocera v35 or later
 
-🐭👾🖲️ MM 1.0.2 now available!
+## 🐭👾🖲️ MM 1.0.2 now available!
 
 MM is the auto-magic solution for combining multiple mouse inputs into a single virtual device. Supports any combination of spinners trackball, mouse or trackpads. We made Multi-Mouse, so you can just play. Requires no editing. MM is designed to configure itself as one device.
 
