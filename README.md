@@ -21,7 +21,7 @@ Easy installation.
 3.  Copy the MM folder to the thumb drive
 4.  Insert the thumb drive to your Batocera Linux box
 5.  cd /media/install/MM
-6.  chmod 745 ./install.sh
+6.  chmod 755 ./install.sh
 7.  ./install.sh -install
 8.  reboot
 
