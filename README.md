@@ -1,7 +1,6 @@
 # Multi-Mouse | MM 1.0.3
 ## 🐭👾🖲️ Get Ready Player One!
-Auto configures Trackball, Spinner, Mouse, Trackpad into one virtual device for Batocera with RetroArch
-For Batocera v35 or later
+Auto configures Trackball, Spinner, Mouse, Trackpad into one virtual device. Multi-Mouse works with Batocera v35 or later.
 
 MM is the magic solution for combining multiple mouse inputs into a single virtual device. Supports any combination of spinners trackball, mouse or trackpads. We made Multi-Mouse so you can just play. Requires no editing. MM is designed to configure itself as one device.
 
