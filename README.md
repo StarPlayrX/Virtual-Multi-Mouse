@@ -1,5 +1,5 @@
-# 🐭👾🖲️ Multi-Mouse
-## Get Ready Player One!
+Multi-Mouse
+## 🐭👾🖲️ Get Ready Player One!
 Auto configures Trackball, Spinner, Mouse, Trackpad into one virtual device for Batocera with RetroArch
 For Batocera v35 or later
 
@@ -11,7 +11,7 @@ Future: Looking into F4 and F5 resets to see if we can do something creative wit
  
 Like Batocera, it's plug and play. Need to change your hardware configuration? Simply reboot or restart your game.
 
-🐭👾🖲️ Easy installation
+## 🐭👾🖲️ Easy installation
 
 1.  Insert a thumb drive
 2.  Format it using ExFat, call it install
@@ -25,7 +25,7 @@ Like Batocera, it's plug and play. Need to change your hardware configuration? S
 10.  `reboot`
 11.  Enjoy!
 
-🐭👾🖲️ Credits
+## 🐭👾🖲️ Credits
 
 * MM 1.0.3 StarPlayrX | Todd Bruss
 * based on previous sswork by MizterB
