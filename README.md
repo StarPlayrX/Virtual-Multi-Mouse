@@ -20,15 +20,17 @@ Like Batocera, it's plug and play. Need to change your hardware configuration? S
 2.  Format it using ExFat, call it install
 3.  Copy the MM folder to the thumb drive
 4.  Insert the thumb drive to your Batocera Linux box
-5.  `cd /media/install/MM`
-6.  `chmod 755 ./install.sh`
-7.  `./install.sh -install`
-8.  `reboot`
-9.  Enjoy!
+5.  Type F1 to enter File Manager
+6.  Type F4 to enter Terminal
+7.  `cd /media/install/MM`
+8.  `chmod 755 ./install.sh`
+9.  `./install.sh -install`
+10.  `reboot`
+11.  Enjoy!
 
 🐭👾🖲️ Credits
 
-* MM 1.0.2 StarPlayrX | Todd Bruss
-* based on work by MizterB
+* MM 1.0.3 StarPlayrX | Todd Bruss
+* based on previous sswork by MizterB
 * Special thanks to the Batocera team
 * Shout out to the RetroArch team
