@@ -1,4 +1,4 @@
-Multi-Mouse
+# Multi-Mouse | MM 1.0.3
 ## 🐭👾🖲️ Get Ready Player One!
 Auto configures Trackball, Spinner, Mouse, Trackpad into one virtual device for Batocera with RetroArch
 For Batocera v35 or later
