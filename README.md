@@ -2,7 +2,7 @@
 
 ## Take full control over your trackballs, spinners and other mice
 
-### For Batocera v35 or later
+### For Batocera v35 or later with RetroArch
 
 🚧🚧🚧 Version 1.0.2 is now under construction, please stand by 🚧🚧🚧
 
