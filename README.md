@@ -1,6 +1,6 @@
 # 🐭👾🖲️ Multi-Mouse
 ## Get Ready Player One!
-## For Batocera v35 or later
+### For Batocera v35 or later
 
 🐭👾🖲️ MM 1.0.2 now available!
 
