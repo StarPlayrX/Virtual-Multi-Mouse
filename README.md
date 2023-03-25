@@ -1,5 +1,8 @@
 # Multi-Mouse MM 🐭👾🖲️
-## For Batocera v35 or later
+
+## Take full control over your Trackball, Spinner and other Mice
+
+### For Batocera v35 or later
 
 🚧🚧🚧 Version 1.0.2 is now under construction, please stand by 🚧🚧🚧
 
