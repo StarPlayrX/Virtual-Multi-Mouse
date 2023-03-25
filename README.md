@@ -1,6 +1,6 @@
 # Multi-Mouse MM 🐭👾🖲️
 
-## Take full control over your trackballs, spinners and other mice
+## Take full control over your trackballs, spinners and other event-mouse's (mice)
 
 ### For Batocera v35 or later with RetroArch
 
