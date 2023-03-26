@@ -5,46 +5,68 @@
 #
 #  Multi-Mouse
 #
-#  MM 1.0.3
+#  MM 1.0.4
 #
 #  Created by StarPlayrX | Todd Bruss on 2023.03.25
 #
 
 dir="/userdata/system/"
 scripts='scripts/'
-custom='custom.sh'
+
+# deprecated
 first='first_script.sh'
 start='multi_mouse_start.sh'
 stop='multi_mouse_stop.sh'
+swap='multi_mouse_watch.sh'
+
+# current batch
+mm="mm.sh"
+multi="multimouse.sh"
+custom='custom.sh'
 
 case "$1" in
     -install)
         echo install
 		echo making script directory
+
         mkdir $dir$scripts
+
 		echo removing previous files
         rm -f $dir$custom
-        rm -f $dir$start
-        rm -f $dir$stop
-		rm -f $dir$scripts$first
+		rm -f $dir$multi
+		rm -f $dir$scripts$mm
+	
+        rm -f $dir$start #deprecated
+        rm -f $dir$stop #deprecated
+        rm -f $dir$swap #deprecated	
+		rm -f $dir$scripts$first #deprecated
+
 		echo copying files
+
         cp ./$custom $dir$custom
-        cp ./$start $dir$start
-        cp ./$stop $dir$stop
-        cp ./$first $dir$scripts$first
+        cp ./$multi $dir$multi
+        cp ./$mm $dir$scripts$mm
+
 		echo updating permissions
+
 		chmod 755 $dir$custom
-		chmod 755 $dir$start
-		chmod 755 $dir$stop
-		chmod 755 $dir$scripts$first
+		chmod 755 $dir$multi
+		chmod 755 $dir$scripts$mm
+
 		echo install complete
         ;;
     -uninstall)
 		echo uninstalling files
-        rm $dir$custom
-        rm $dir$start
-        rm $dir$stop
-		rm $dir$scripts$first
+rm -f $dir$custom
+        rm -f $dir$custom
+		rm -f $dir$multi
+		rm -f $dir$scripts$mm
+	
+        rm -f $dir$start #deprecated
+        rm -f $dir$stop #deprecated
+        rm -f $dir$swap #deprecated	
+		rm -f $dir$scripts$first #deprecated
+
 		echo uninstall complete
         ;;
     -restart)
