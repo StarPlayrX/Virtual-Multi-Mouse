@@ -5,10 +5,12 @@
 #
 #  Multi-Mouse
 #
-#  MM 1.0.4
+#  MM 1.0.5
 #
 #  Created by StarPlayrX | Todd Bruss on 2023.03.25
 #
+
+# todo: Add logging to the installer
 
 dir="/userdata/system/"
 scripts='scripts/'
@@ -57,7 +59,6 @@ case "$1" in
         ;;
     -uninstall)
 		echo uninstalling files
-rm -f $dir$custom
         rm -f $dir$custom
 		rm -f $dir$multi
 		rm -f $dir$scripts$mm
