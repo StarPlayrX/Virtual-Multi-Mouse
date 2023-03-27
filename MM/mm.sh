@@ -3,9 +3,8 @@
 #
 #  mm.sh
 #
+#  Virtual
 #  Multi-Mouse
-#
-#  MM 1.0.5
 #
 #  Created by StarPlayrX | Todd Bruss on 2023.03.25
 #
@@ -14,6 +13,9 @@
 # https://wiki.batocera.org/launch_a_script
 
 #!/bin/bash
+
+# version
+version='1.0.6'
 
 # variables
 mouse='Virtual_Multi_Mouse'
@@ -31,7 +33,7 @@ log() {
 }
 
 log "=========================================================="
-log "Multi Mouse 1.0.5 | ${0} | ${1}"              
+log "Multi-Mouse ${version} | ${0} | ${1}"              
 log "=========================================================="
 
 seek() {
@@ -65,11 +67,12 @@ case $1 in
 		update
 	;;
 	init)
+		sleep $delay
 		enable
 	;;
     *)
- 
+        echo ""
 		echo Usage $0  gameStart  gameStop  init
-
+        echo ""
     ;;
 esac

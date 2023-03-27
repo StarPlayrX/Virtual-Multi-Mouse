@@ -3,12 +3,13 @@
 #
 #  custom.sh
 #
+#  Virtual  
 #  Multi-Mouse
 #
-#  MM 1.0.5
+#  Created by StarPlayrX | Todd Bruss on 2023.03.26
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.03.25
-#
+
+version='1.0.6'
 
 dir='/userdata/system/'
 scripts='scripts/'
@@ -20,7 +21,7 @@ mmcustomlog='mm_custom.log'
 logs='/logs/'
 start='start'
 stop='stop'
-
+delay=2
 rm -f $dir$logs$mmcustomlog
 
 log() {
@@ -28,7 +29,7 @@ log() {
 }
 
 log "======================================="
-log "Multi Mouse 1.0.5 | ${0} | ${1}"
+log "Multi-Mouse ${version} | ${0} | ${1}"
 log "======================================="
 
 case "$1" in
@@ -39,11 +40,19 @@ case "$1" in
 		rm -f $dir$logs$mmlog
 		rm -f $dir$logs$multimouselog
 
+		log "Sleeping for ${delay} seconds..."
+		sleep $delay
+
 		log "Startup retroarch.log ahead of time"
 		$dir$scripts$mmgs init
 
+		log "Sleeping for ${delay} seconds..."
+		sleep $delay
+
+		log "Gentleman start your engines!"
         ($dir$mm $start) &
-        ;;
+     
+    ;;
     stop)
         log "${1}: Stopping Multi-Mouse"
         #($dir$mm $stop) &
@@ -52,15 +61,17 @@ case "$1" in
 		log "${1}: Restarting Multi-Mouse"
     	# check if we can do soft reboot using F4 in the gui
 		#($dir$mm $stop) &
-        ;;
+    ;;
     reload)
 		log "${1}: Reloading Multi-Mouse"
         #($dir$mm $start) &
-        ;;
+    ;;
       *)
         log "${0} No matching arguments: ${1}"
+        echo ""
         echo "Usage: ${0}  start  stop  restart  reload"
-        ;;
+        echo ""
+   ;;
 esac
  
 exit $?

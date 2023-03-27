@@ -3,12 +3,13 @@
 #
 #  multimouse.sh
 #
+#  Virtual
 #  Multi-Mouse
 #
-#  MM 1.0.5
+#  Created by StarPlayrX | Todd Bruss on 2023.03.26
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.03.25
-#
+
+version='1.0.6'
 
 # variables
 script='custom.sh'
@@ -24,22 +25,26 @@ mmlog='multimouse.log'
 logfile='retroarch.log'
 delay=1
 
-cd ${dest}
-
 log() {
  (echo "${1}" | ts) >> $userdata$dir$mmlog
 }
 
 log "========================================================"
-log "Multi Mouse 1.0.5 ${0} | ${1}"
+log "Multi-Mouse ${version} ${0} | ${1}"
 log "========================================================"
+
+log "Switching to ${dest} directory"
+cd ${dest}
 
 destroy() {
 	log "Halting Evsieve"
-	killall evsieve
+	
+	(killall evsieve | ts) >> $userdata$dir$mmlog 2>&1 &
 	sleep $delay
+	
 	multi_mouse_exists=$(ls -a | grep -c $mm)
 	log "Checking if symlink exits..."	
+	
 	if [ $multi_mouse_exists == "1" ]
 	then
 		log "Removing symbolic link"
@@ -48,46 +53,45 @@ destroy() {
 	fi
 }
  
-log "Starting up Multi-Mouse..."
-log "Switching to ${dest} directory"
 
 case "$1" in
     start)
-        log "${1}: starting multi-mouse"
+        log "${1}: Starting the virtual multi-mouse"
 		destroy        
-		;;
+	;;
     stop)
-        log "${1}: stopping multi-mouse"
+        log "${1}: Stopping the virtual multi-mouse"
 		destroy
         exit 0
-		;;
-      *)
-        log "No matching arguments $0 $1"
-        echo "Usage: $0  start  stop"
-      	;;
+	;;
+    *)
+    log "No matching arguments $0 $1"
+	echo ''
+    echo "Usage: $0  start  stop"
+	echo ''
+    ;;
 esac
 
-log "Counting event-mouse devices"
-log "This becomes our mouse index" 
-
+log "Counting physical usb pointing devices"
 mi=$(ls -a | grep -c mouse)
-log "Found $mi event mouse devices"
+log "Found $mi physical event mouse devices"
 
 # if no event-mouse devices are present sleep and re-run
 if [[ $mi == "0" ]] 
 then 
-	log "No event-mouse input devices, sleeping for 10 seconds..."
+	log "No event-mouse are present input devices, sleeping for 10 seconds..."
  	destroy #sleeps for 1 second 
  	sleep 9
  	($userdata$script start) &
  	exit 0
 fi
 
-log "Resetting Retroarch log"
-rm -f $userdata$dir$logfile
-
+log "This value is  our global mouse index for player one" 
 log "Set global.retroarch.input_player1_mouse_index ${mi}" 
 batocera-settings-set global.retroarch.input_player1_mouse_index $mi
+
+log "Resetting Retroarch log"
+rm -f $userdata$dir$logfile
 
 log "Gather all event mouse names"
 event_mouse=( $(ls -a | grep mouse) )
@@ -126,21 +130,20 @@ log "Starting USB watcher..."
 hot=$(ls -a | grep mouse)
 swp=$hot
 
-log "Monitor event-mouse list"
+log "Monitor physical event-mouse devices"
 while [[ $hot == $swp ]]
 do
     sleep $delay
     swp=$(ls -a | grep mouse)
 done
 
-log "USB Event Mouse chain has been updated!"
+log "USB physical event mouse devics list been updated!"
 
-log "Destroying the previous Virtual Mouse"
+log "Destroying the previous virtual multi-mouse"
 destroy
 
 log "Sleeping for 5 seconds..."
 sleep 5
 
-log "Restarting Multi-Mouse..."
-
-($userdata$script start) &output
+log "Restarting the virtual multi-mouse now..."
+($userdata$script start) &
