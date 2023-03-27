@@ -1,8 +1,11 @@
 # 🐭👾🖲️ Virtual Multi-Mouse 1.0.6 🖲️👾🐭
-The best zero-config solution for combining your spinner, trackball, mouse and lightguns into one virtual mouse! Written from the ground up. Multi-Mouse supports with Batocera v35 or later.
+The best zero-config solution for combining your spinner, trackball, mouse and lightguns into one virtual mouse! Written from the ground up, MM is composed as three simple but highly effective shell scripts that do wonders auto-linking your pointing devices with hardly any user intervesion.
+
+## 🐭👾🖲️ What does Multi-Mouse run on?
+Multi-Mouse supports with Batocera v35 or later. There are plans to make it work with RecalBox and other gaming Linux distros that can run EmulationStation and Retroarch.
 
 ## 🐭👾🖲️ Get Ready Player One!
-Ready to dive in for some golden age Arcade gaming? Multi-Mouse is the magic solution for combining multiple mouse inputs into a single virtual device. Supports any combination of spinners trackball, mouse or trackpads. We made Multi-Mouse so you can just play. Requires no editing. MM is designed to configure itself as one device.
+Ready to dive in for some golden age Arcade gaming? Multi-Mouse is the automatic solution for combining multiple mouse inputs into a single virtual device. Supports any combination of spinners trackball, mouse or trackpads. We made Multi-Mouse so you can just play. Requires no editing. MM is designed to configure itself as one device.
 
 Get ready player one. No hard encoded, hard to type event-mouse names. MM will hunt them down for you making the setup ultra easy. There's no editing after you swap out new mouse, trackball or spinner. No need to configure the mouse input for a single 1 player game.
  
