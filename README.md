@@ -12,7 +12,7 @@ Like Batocera it's plug and play. Need to change your hardware configuration? Si
 
 Known issue: on Batocera v35, for the mm.sh log scraper script, gameStart never gets called, but gameEnd does. This seems to be an error, as we think gameEnd is being called at gameStart.
 
-## 🐭👾🖲️ Ready to enter the Multi-Verse?
+## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
 1.  Insert a thumb drive to a Mac or PC
 2.  Format it using ExFat, name the disk `install`
