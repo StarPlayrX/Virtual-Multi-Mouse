@@ -1,5 +1,5 @@
 # 🐭👾🖲️ Virtual Multi-Mouse 1.0.6 🖲️👾🐭
-The best zero-config solution for combining your spinner, trackball, mouse and lightguns into one virtual mouse! Written from the ground up, MM is composed as three simple but highly effective shell scripts that do wonders auto-linking your pointing devices with hardly any user intervesion.
+The best zero-config solution for combining your usb spinner, trackball, mouse and lightguns into one virtual mouse! Written from the ground up, MM is aim is to remove the barriers to entry when it comes to physical mouse device management. Plus it's so easy to install, anyone can do it!
 
 ## 🐭👾🖲️ What does Multi-Mouse run on?
 Multi-Mouse supports with Batocera v35 or later. There are plans to make it work with RecalBox and other gaming Linux distros that can run EmulationStation and Retroarch. Multi-Mouse is completely open.
