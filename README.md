@@ -1,4 +1,4 @@
-# Multi-Mouse | MM 1.0.4
+# Virtual | Multi-Mouse | MM 1.0.5
 ## 🐭👾🖲️ Get Ready Player One!
 Auto configures Trackball, Spinner, Mouse, Trackpad into one virtual device. Multi-Mouse works with Batocera v35 or later.
 
@@ -26,7 +26,8 @@ Known issue: on Batocera v35, for the mm.sh log scraper script, gameStart never 
 
 ## 🐭👾🖲️ Credits
 
-* MM 1.0.4 StarPlayrX | Todd Bruss
-* based on previous work by MizterB
+* MM 1.0.5 StarPlayrX | Todd Bruss
+* MizterB for his initial work
 * Special thanks to the Batocera team
-* Shout out to the RetroArch team
+* Shout out to the RetroArch, EmulationStation and Recalbox teams
+
