@@ -1,4 +1,5 @@
 # 🐭👾🖲️ Virtual Multi-Mouse (MM) 1.0.6 🖲️👾🐭
+The best zero-config solution for combining your spinner, trackball, mouse, etc into one virtual mouse! Written from the ground up.
 
 ## 🐭👾🖲️ Get Ready Player One!
 Auto configures Trackball, Spinner, Mouse, Trackpad into one virtual device. Multi-Mouse works with Batocera v35 or later.
