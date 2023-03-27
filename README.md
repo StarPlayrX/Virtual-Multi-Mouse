@@ -39,3 +39,6 @@ Known issue: on Batocera v35, for the mm.sh log scraper script, gameStart never 
 * https://forums.libretro.com/t/configuring-ra-for-multi-mouse-spinners-lightguns-tackballs/12619E
 * https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index/8
 * https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index/10
+
+## 🐭👾🖲️ Coming Soon
+* Ports for other versions of Linux that support EmulationStation and RetroArch
