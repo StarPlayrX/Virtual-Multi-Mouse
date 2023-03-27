@@ -26,7 +26,7 @@ Like Batocera it's plug and play. Need to change your hardware configuration? Si
 
 ## 🐭👾🖲️ Credits
 
-* Virtual Multi-Mouse develped by 1.0.6 StarPlayrX aka Todd Bruss
+* Virtual Multi-Mouse develped by StarPlayrX aka Todd Bruss
 * MizterB for his initial post on Evseive, Batocera, Retroarch settings
 * Special thanks to the Batocera team for giving me a renewed interest in RetroArch and Linux
 * Shout out to RetroArch, EmulationStation, Recalbox and Multiple Machine Arcade Emulator teams
