@@ -1,4 +1,4 @@
-# 🐭👾🖲️ Virtual Multi-Mouse (MM) 1.0.6 🖲️👾🐭
+# 🐭👾🖲️ Virtual Multi-Mouse 1.0.6 🖲️👾🐭
 The best zero-config solution for combining your spinner, trackball, mouse, etc into one virtual mouse! Written from the ground up. Ready to dive in for some golden age Arcade gaming?
 
 ## 🐭👾🖲️ Get Ready Player One!
