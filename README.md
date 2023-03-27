@@ -31,7 +31,7 @@ Known issue: on Batocera v35, for the mm.sh log scraper script, gameStart never 
 * Virtual Multi-Mouse develped by 1.0.6 StarPlayrX aka Todd Bruss
 * MizterB for his initial post on Evseive, Batocera, Retroarch settings
 * Special thanks to the Batocera team for giving me a renewed interest in RetroArch and Linux
-* Shout out to the RetroArch, EmulationStation, Multiple Machine Arcade Emulator and Recalbox teams
+* Shout out to RetroArch, EmulationStation, Recalbox and Multiple Machine Arcade Emulator teams
 
 ## 🐭👾🖲️ Reference Material
 * https://github.com/KarsMulder/evsieve
