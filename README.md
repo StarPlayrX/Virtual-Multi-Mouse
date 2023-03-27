@@ -33,7 +33,7 @@ Like Batocera it's plug and play. Need to change your hardware configuration? Si
 4.  `cd /media/install/MM`
 5.  `./install.sh -uninstall`
 6.  `reboot`
-7.  No hard feelings, we understand Multi-Mouse is not for everyone!
+7.  No hard feelings, we understand Multi-Mouse is not for everyone.
 
 ## 🐭👾🖲️ Credits
 
