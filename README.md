@@ -35,5 +35,6 @@ Known issue: on Batocera v35, for the mm.sh log scraper script, gameStart never 
 
 ## 🐭👾🖲️ Reference Material
 * https://github.com/KarsMulder/evsieve
+* https://wiki.batocera.org/launch_a_script
 * https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index/8
 * https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index/10
