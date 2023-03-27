@@ -8,9 +8,7 @@ MM is the magic solution for combining multiple mouse inputs into a single virtu
 
 Get ready player one. No hard encoded, hard to type event-mouse names. MM will hunt them down for you making the setup ultra easy. There's no editing after you swap out new mouse, trackball or spinner. No need to configure the mouse input for a single 1 player game.
  
-Like Batocera it's plug and play. Need to change your hardware configuration? Simply reboot or restart your game. Multi-Mouse aims to be hotswappable as well. We made some progress with this release, but there's still more work to be done. We plan to make it work like any other usb device. Log scrapping may eventually be removed or used only as a checksum in the near future.
-
-Known issue: on Batocera v35, for the mm.sh log scraper script, gameStart never gets called, but gameEnd does. This seems to be an error, as we think gameEnd is being called at gameStart.
+Like Batocera it's plug and play. Need to change your hardware configuration? Simply reboot or restart your game. Multi-Mouse aims to be hotswappable as well. We made some progress with this release, but there's still more work to be done. We plan to make it work like any other usb device. Log scrapping may eventually be removed or used only as a checksum in the near future. 
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
