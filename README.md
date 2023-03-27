@@ -25,6 +25,16 @@ Like Batocera it's plug and play. Need to change your hardware configuration? Si
 10.  `reboot`
 11.  Enjoy!
 
+## 🐭👾🖲️ Want to Leave the Multi-Verse?
+
+1.  Insert the thumb drive to your Batocera Linux box
+2.  Type `F1` to enter File Manager
+3.  Navigate to /Applications and open Xterm
+4.  `cd /media/install/MM`
+5.  `./install.sh -uninstall`
+6.  `reboot`
+7.  No hard feelings, we understand Multi-Mouse is not for everyone!
+
 ## 🐭👾🖲️ Credits
 
 * Virtual Multi-Mouse develped by StarPlayrX aka Todd Bruss
