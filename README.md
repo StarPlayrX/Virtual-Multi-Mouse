@@ -19,7 +19,7 @@ Known issue: The Apple Magic Trackpad by default has been removed from Virtual M
 5.  Type `F1` to enter File Manager
 6.  Navigate to /Applications and open Xterm
 7.  `cd /media/install/MM`
-8.  `chmod 755 ./install.sh` #may not be needed
+8.  `chmod 755 install.sh` #may not be needed
 9.  `./install.sh -install`
 10.  `reboot`
 11.  or try install of rebooting
