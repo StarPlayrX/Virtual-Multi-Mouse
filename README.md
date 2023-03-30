@@ -6,13 +6,9 @@ The best auto-config solution for combining your spinner, trackball, mouse and l
 
 Auto configures trackball, spinner, mouse, lightgun into one virtual device. Multi-Mouse works with Batocera v35 or later. Recently tested on v36.
 
-MM is the magic solution for combining multiple mouse inputs into a single virtual device. Supports any combination of spinners trackball, mouse or trackpads. We made Multi-Mouse so you can just play. Requires no editing. MM is designed to configure itself as one device.
+Like Batocera it's made to just play! Need to change your mouse configuration? Multi-Mouse intelligently preflights the games you play ahead of time. Within a flash it sets up the virtual mouse accordingly. All you need to do is run a game! Having trouble, exit and give it another go. Worst case, scenario reboot. That's all there is to it.
 
-Get ready player one. No hard encoded, hard to type event-mouse names. MM will hunt them down for you making the setup ultra easy. There's no editing after you swap out new mouse, trackball or spinner. No need to configure the mouse input for a single 1 player game.
- 
-Like Batocera it's plug and play. Need to change your hardware configuration? Multi-Mouse intelligently preflights the games you play and sets up the virtual mouse accordingly. Simply run a game? Having trouble, exit and try? Worst case, scenario reboot.
-
-Removed Apple Magic Trackpads from the Virtual Multi-Mouse. This device slows down Spinners and Trackballs considerably. If you need to use it, let me know, I can advise and edit.
+Known issue: The Apple Magic Trackpad by default has been removed from Virtual Multi-Mouse. This Trackpad slows down and Spinner and Trackball setup. If you need to use it, you can simply comment out the 'Apple' variable in multimouse.sh.
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
@@ -33,13 +29,22 @@ Removed Apple Magic Trackpads from the Virtual Multi-Mouse. This device slows do
 15.  `control-Q`
 16.  Enjoy your new multi-mouse!
 
-## 🐭👾🖲️ Credits
+## 🐭👾🖲️ Want to Leave the Multi-Verse?
 
+1.  Insert the thumb drive to your Batocera Linux box
+2.  Type `F1` to enter File Manager
+3.  Navigate to /Applications and open Xterm
+4.  `cd /media/install/MM`
+5.  `./install.sh -uninstall`
+6.  `reboot`
+7.  No hard feelings, we understand Multi-Mouse is not for everyone.
+
+## 🐭👾🖲️ Credits
 * Virtual Multi-Mouse develped by StarPlayrX aka Todd Bruss
 * KarsMulder for writing Evsieve
 * MizterB for his post on the subject
 * Special thanks to the Batocera team for giving me a renewed interest in Linux
-* Shout out to RetroArch, EmulationStation, Recalbox and Multiple Machine Arcade Emulator teams
+* Shout out to RetroArch, EmulationStation, Recalbox and MAME teams
 
 ## 🐭👾🖲️ Reference Material
 
