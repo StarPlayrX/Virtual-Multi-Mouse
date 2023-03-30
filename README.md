@@ -22,7 +22,7 @@ Known issue: The Apple Magic Trackpad by default has been removed from Virtual M
 8.  `chmod 755 ./install.sh` #may not be needed
 9.  `./install.sh -install`
 10.  `reboot`
-11.  or try
+11.  or try install of rebooting
 12.  `cd /userdata/system`
 13.  `./custom.sh start`
 14.  `exit`
