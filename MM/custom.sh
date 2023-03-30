@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #
 #  custom.sh
@@ -9,7 +9,7 @@
 #  Created by StarPlayrX | Todd Bruss on 2023.03.26
 #
 
-version='1.0.6'
+version='1.0.7'
 
 dir='/userdata/system/'
 scripts='scripts/'
@@ -21,11 +21,11 @@ mmcustomlog='mm_custom.log'
 logs='/logs/'
 start='start'
 stop='stop'
-delay=2
+delay=1
 rm -f $dir$logs$mmcustomlog
 
 log() {
- (echo "${1}" | ts) >> $dir$logs$mmcustomlog
+    (echo "${1}" | ts) >> $dir$logs$mmcustomlog
 }
 
 log "======================================="
@@ -36,41 +36,26 @@ case "$1" in
     start)
         log "${1}: Starting Multi-Mouse"
 		
-		log "Reseting previous logs"
-		rm -f $dir$logs$mmlog
-		rm -f $dir$logs$multimouselog
+	log "Reseting previous logs"
+	rm -f $dir$logs$mmlog
+	rm -f $dir$logs$multimouselog
+	
+	log "Let the system finish booting up..."
+	sleep $delay
+	
+	$dir$scripts$mmgs init Welcome to the Jungle $version
 
-		log "Sleeping for ${delay} seconds..."
-		sleep $delay
-
-		log "Startup retroarch.log ahead of time"
-		$dir$scripts$mmgs init
-
-		log "Sleeping for ${delay} seconds..."
-		sleep $delay
-
-		log "Gentleman start your engines!"
-        ($dir$mm $start) &
-     
+	log "Gentleman start your engines!"
+        ($dir$mm $start $version) &
     ;;
     stop)
         log "${1}: Stopping Multi-Mouse"
-        #($dir$mm $stop) &
-	;;
-    restart)
-		log "${1}: Restarting Multi-Mouse"
-    	# check if we can do soft reboot using F4 in the gui
-		#($dir$mm $stop) &
-    ;;
-    reload)
-		log "${1}: Reloading Multi-Mouse"
-        #($dir$mm $start) &
+        ($dir$mm $stop $version) &
     ;;
       *)
         log "${0} No matching arguments: ${1}"
         echo ""
-        echo "Usage: ${0}  start  stop  restart  reload"
-        echo ""
+	echo "Usage: ${0}  start  stop"
    ;;
 esac
  
