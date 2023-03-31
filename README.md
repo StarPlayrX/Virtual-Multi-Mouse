@@ -64,6 +64,4 @@ Batocera.conf: Have seen the Batocera file get corrupted and when it happens, no
 * https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index/10
 
 ## 🐭👾🖲️ Coming Soon
-
-* Ports to other versions of Linux that support udev input driver, Evsieve, EmulationStation and RetroArch
 * Pacman package manager packages.
