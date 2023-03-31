@@ -10,6 +10,8 @@ Like Batocera it's made to just play! Need to change your mouse configuration? M
 
 Known issue: The Apple Magic Trackpad by default has been removed from Virtual Multi-Mouse. This Trackpad slows down and Spinner and Trackball setup. If you need to use it, you can simply comment out the 'Apple' variable in multimouse.sh.
 
+Virtual Multi-Mouse preflights your games ahead of time and tries to make sure everyhing is up to snuff before you game runs. Everything it does it tries it's best to about a smarter way of doing things. This takes time to get it right and thanks for your patience to those who are testing VMM now!
+
 Troubleshooting: If things are not working, try exiting your game and relaunching it. This usually should not be needed but that sometimes gives VMM a jump start. If your mouse controllers are still not working, reboot Batocera. Worst case, try backing up and removing the Batocera.conf file. We are aware sometimes this file gets corrupted. We will start backing the config up in the next release and retain a clean copy from the latest batocera release just in case.
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
