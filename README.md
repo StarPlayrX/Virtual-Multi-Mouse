@@ -14,7 +14,7 @@ Virtual Multi-Mouse preflights your games ahead of time and tries to make sure e
 
 Troubleshooting: If things are not working, try exiting your game and relaunching it. Sometimes and not often, VMM needs a jump start. If your mouse controllers are still not working, simply reboot Batocera. 
 
-Try avoiding unplugging and replugging your mouse devices. Joysticks and Controllers are fine, but swapping out your pointing devices can sometimes give VMM a hard time. The software tries its best to over come this and we are always making improvments to this area. If you beleve in set it and forget it, you should not have problem. VMM behaves more consistently in a stable enviromment.
+Try avoiding unplugging and replugging your mouse devices. Joysticks and Controllers are fine, but swapping out your pointing devices can sometimes give VMM a hard time. The software tries its best to over come this and we are always making improvments to this area. If you believe in set it and forget it, you should not have problem. VMM behaves more consistently in a stable enviromment. Over time, Virtual Multi-Mouse will handle hot plugging like child's play.
 
 Batocera.conf: Have seen the Batocera file get corrupted and when it happens, no games will launch. We recommened backing this file up. The next version of VMM will back it up automaticaly and maintain a clean version as well. We are investigating this issue.
 
