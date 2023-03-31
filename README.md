@@ -23,14 +23,14 @@ Batocera.conf: Have seen the Batocera file get corrupted and when it happens, no
 1.  Insert a thumb drive to a Mac or PC
 2.  Format it using ExFat
 3.  Name the disk `install`
-3.  Copy the `MM folder` to the thumb drive
-4.  Insert the thumb drive to your Batocera Linux box
-5.  Type `F1` to enter File Manager
-6.  Navigate to /Applications and open Xterm
-7.  `cd /media/install/MM`
-8.  `chmod 755 install.sh` #may not be needed
-9.  `./install.sh -install`
-10.  `reboot`
+4.  Copy the `MM folder` to the thumb drive
+5.  Insert the thumb drive to your Batocera Linux box
+6.  Type `F1` to enter File Manager
+7.  Navigate to /Applications and open Xterm
+8.  `cd /media/install/MM`
+9.  `chmod 755 install.sh` #may not be needed
+10.  `./install.sh -install`
+11.  `reboot`
 11.  or try install of rebooting
 12.  `cd /userdata/system`
 13.  `./custom.sh start`
