@@ -1,4 +1,4 @@
-# 🐭👾🖲️ Virtual Multi-Mouse 1.0.7 🖲️👾🐭
+# 🐭👾🖲️ Virtual Multi-Mouse 1.0.8 🖲️👾🐭
 
 The best auto-config solution for combining your spinner, trackball, mouse and lightguns into one virtual mouse! Written from the ground up. Ready to dive in for some golden age Arcade gaming?
 
@@ -41,8 +41,8 @@ Known issue: The Apple Magic Trackpad by default has been removed from Virtual M
 
 ## 🐭👾🖲️ Credits
 * Virtual Multi-Mouse develped by StarPlayrX aka Todd Bruss
-* KarsMulder for writing Evsieve
-* MizterB for his post on the subject
+* KarsMulder for writing Evsieve, simply amazing work
+* MizterB virtual mouse index finder line and batocera to retroarch logging
 * Special thanks to the Batocera team for giving me a renewed interest in Linux
 * Shout out to RetroArch, EmulationStation, Recalbox and MAME teams
 
