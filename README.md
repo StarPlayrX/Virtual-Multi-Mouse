@@ -12,7 +12,7 @@ Known issue: The Apple Magic Trackpad by default has been removed from Virtual M
 
 Virtual Multi-Mouse preflights your games ahead of time and tries to make sure everyhing is up to snuff before your game runs. Everything it does it tries it's best to about a smarter way of doing things. More intellience is being added to each release. This takes time to get it right and thanks for your patience to those who are testing VMM now! Our software aims to be zero or auto-config! We want VMM to be Auto-Magic!
 
-Troubleshooting: If things are not working, try exiting your game and relaunching it. This usually should not be needed but that sometimes gives VMM a jump start. If your mouse controllers are still not working, reboot Batocera. Worst case, try backing up and removing the Batocera.conf file. We are aware sometimes this file gets corrupted. We will start backing the config up in the next release and retain a clean copy from the latest batocera release just in case.
+Troubleshooting: If things are not working, try exiting your game and relaunching it. This usually should not be needed but that sometimes gives VMM a jump start. If your mouse controllers are still not working, reboot Batocera. Worst case, try backing up and removing the Batocera.conf file. We are aware sometimes this file gets corrupted. We will start backing the config up in the next release and retain a clean copy from the latest Batocera release just in case. In the mean time, it is a good idea to backup your batocera.conf file.
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
