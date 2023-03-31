@@ -57,3 +57,4 @@ Known issue: The Apple Magic Trackpad by default has been removed from Virtual M
 ## 🐭👾🖲️ Coming Soon
 
 * Ports to other versions of Linux that support udev input driver, Evsieve, EmulationStation and RetroArch
+* Pacman package manager packages.
