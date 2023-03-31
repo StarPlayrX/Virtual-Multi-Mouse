@@ -49,7 +49,7 @@ Batocera.conf: Have seen the Batocera file get corrupted and when it happens, no
 7.  No hard feelings, we understand Multi-Mouse is not for everyone.
 
 ## 🐭👾🖲️ Credits
-* Virtual Multi-Mouse develped by StarPlayrX aka Todd Bruss
+* Virtual Multi-Mouse developed by StarPlayrX aka Todd Bruss
 * KarsMulder for writing Evsieve, simply amazing work
 * MizterB virtual mouse index finder line and batocera to retroarch logging
 * Special thanks to the Batocera team for giving me a renewed interest in Linux
