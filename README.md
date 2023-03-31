@@ -6,9 +6,9 @@ The best auto-config solution for combining your spinner, trackball, mouse and l
 
 Auto configures trackball, spinner, mouse, lightgun into one virtual device. Multi-Mouse works with Batocera v35 or later. Recently tested on v36.
 
-Like Batocera it's made to just play! Need to change your mouse configuration? Multi-Mouse intelligently preflights the games you play ahead of time. Within a flash it sets up the virtual mouse accordingly. All you need to do is run a game! Having trouble, exit and give it another go. Worst case, scenario reboot. That's all there is to it.
+Like Batocera it's made to just play! Need to change your mouse configuration? Multi-Mouse intelligently preflights the games you play ahead of time. Within a flash it sets up the virtual mouse accordingly. All you need to do is run a game!
 
-Known issue: The Apple Magic Trackpad by default has been removed from Virtual Multi-Mouse. This Trackpad slows down and Spinner and Trackball setup. If you need to use it, you can simply comment out the 'Apple' variable in multimouse.sh.
+Known issue: The Apple Magic Trackpad by default has been removed from Virtual Multi-Mouse. This Trackpad slows down and Spinner and Trackball setup. If you need to use it, you can simply comment out the 'Apple' variable in multimouse.sh. Troubleshooting: If things are not working, try exiting your game and relaunching it. This usually should not be needed but that sometimes gives VMM a jump start. If your mouse controllers are still not working, reboot Batocera. Worst case, try backing up and removing the Batocera.conf file. We are aware somethings this file gets defunct, We will start backing it up in the next release and also include a clean version v36 as well. We hope that issue will be resolved soon.
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
