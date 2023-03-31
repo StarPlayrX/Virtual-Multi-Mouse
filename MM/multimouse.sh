@@ -6,7 +6,7 @@
 #  Virtual
 #  Multi-Mouse
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.03.26
+#  Created by StarPlayrX | Todd Bruss on 2023.03.30
 #
 
 script='custom.sh'
@@ -36,37 +36,36 @@ log "Switching to ${dest} directory"
 cd ${dest}
 
 destroy() {
-log "Halting Evsieve"
-	
-(killall evsieve | ts) >> $sys$dir$mmlog 2>&1 &
 
-sleep $delay
-	
+    log "Halting Evsieve"
+    (killall evsieve | ts) >> $sys$dir$mmlog 2>&1 &
+
     multi_mouse_exists=$(ls -a | grep -c $mm | sort -u)
     log "Checking if symlink exits..."	
 	
-    if [ $multi_mouse_exists == "1" ]
+    if [[ $multi_mouse_exists == "1" ]]
     then
         log "Removing symbolic link"
         rm $mm
-        sleep $delay
     fi
 } 
 case "$1" in
     start)
-        log "${1}: Starting the virtual multi-mouse"
-	destroy        
+	destroy
+        log "${1}: Starting the virtual multi-mouse"        
     ;;
     stop)
-        log "${1}: Stopping the virtual multi-mouse"
 	destroy
+        log "${1}: Stopping the virtual multi-mouse"
         exit 0
     ;;
     *)
-    log "No matching arguments $0 $1"
+    log "**!! No matching arguments ${0} ${1} !!**"
 	echo ''
     echo "Usage: $0  start  stop"
 	echo ''
+	destroy
+	exit 0
     ;;
 esac
 
@@ -75,18 +74,31 @@ mi=$(ls -a | grep -c mouse | sort -u)
 log "Found $mi physical event mouse devices"
 
 # if no event-mouse devices are present sleep and re-run
+# to do make this a loop instead
 if [[ $mi == "0" ]] 
 then 
-    log "No event-mouse are present input devices, sleeping for 10 seconds..."
-    destroy #sleeps for 1 second 
-    sleep 9
+    log "No event-mouse are present input devices, sleeping for 10 seconds..." 
+    sleep 10
     ($sys$script start) &
     exit 0
 fi
 
-#log "This value is our global mouse index for player one" 
-#log "Set global.retroarch.input_player1_mouse_index ${mi}" 
-#batocera-settings-set global.retroarch.input_player1_mouse_index $mi
+# The watcher starts here:
+log "Checking for USB pointer devices..."
+
+hot=$(ls -a | grep -c mouse | sort -u)
+
+log "Monitor physical event-mouse devices"
+while [[ $hot == "0" ]]
+do
+    sleep $delay
+	hot=$(ls -a | grep -c mouse | sort -u)
+	log "No mouse devices, sleeping..."
+	sleep $delay
+done
+
+#ensure we are clean to start
+destroy
 
 log "Gather all event mouse names"
 event_mouse=( $(ls -a | grep mouse | sort -u) )
@@ -95,11 +107,11 @@ event_mouse=( $(ls -a | grep mouse | sort -u) )
 args=()
 
 log "Locating all mouse devices"
-log "Includes trackballs, trackpads, mice, spinners, etc"
+log "Includes trackballs, non-Apple trackpads, mice, spinners, etc"
 
 # Apple Magic Trackpad's slow down Spinners and Trackballs
 # Therefore are removing from the Virtual Multi-Mouse
-apple="usb-Apple_Inc._Magic_Trackpad"
+apple='Magic_Trackpad' # We may map the clicks and discard the tracking
 
 for ev in "${event_mouse[@]}"
 do 
@@ -109,17 +121,26 @@ do
 	        log ":( Ignoring mouse input ${apple} :("      
 	    ;;
 	    *)
-	    log "Adding mouse Input ${ev}"
-		args+=("${input} ${dest}${ev}")
+	    	log "Adding mouse Input ${ev}"
+			args+=("${input} ${dest}${ev}")
 	    ;;
 	esac
 done 
 
 log "Setting the physical mouse inputs"
-for arg in "${args[@]}}"
+for arg in 
 do
     log "*** arg: ${arg}"
 done
+
+
+count="${args[@]}}"
+
+#log "This value is our initial global mouse index for player one" 
+#log "Set global.retroarch.input_player1_mouse_index ${mi}" 
+
+#batocera-settings-set global.retroarch.input_player1_mouse_index $int
+#log "batocera-settings-set global.retroarch.input_player1_mouse_index ${count}"
 
 args+=("${output} ${name}${mm} ${create}${dest}${mm}")
 
@@ -132,9 +153,10 @@ log "Creating our Virtual Multi-Mouse"
 sleep $delay
 log "Evsieve Started..."
 
-# preflight retroarch's mouse index - hotswappable
-#log "Running Preflight (HotSwappable USB-Mouse)..."
+#log "Preflight Retroarch's mouse index - semi-hotswappable"
 #$sys$scr$vmm prep Get Ready Player One! $2
+
+#sleep $delay
 
 #log "Heat Seeking Missle Test Area..."
 #$sys$scr$vmm game Virtual Multi Mouse Rocks $2
@@ -148,9 +170,11 @@ swp=$hot
 log "Monitor physical event-mouse devices"
 while [[ $hot == $swp ]]
 do
-    sleep 2.5
+    sleep $delay
     swp=$(ls -a | grep mouse | sort -u)
+	sleep $delay
 done
 
+(kill -9 $! | ts) >> $sys$dir$mmlog 2>&1 &
 log "Restarting Virtual Multi-Mouse..."
 ($sys$script start) &

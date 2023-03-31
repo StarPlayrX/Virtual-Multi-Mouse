@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 #  custom.sh
@@ -6,10 +6,10 @@
 #  Virtual  
 #  Multi-Mouse
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.03.26
+#  Created by StarPlayrX | Todd Bruss on 2023.03.30
 #
 
-version='1.0.7'
+version='1.0.8'
 
 dir='/userdata/system/'
 scripts='scripts/'
@@ -28,24 +28,24 @@ log() {
     (echo "${1}" | ts) >> $dir$logs$mmcustomlog
 }
 
-log "======================================="
+log "======================================================"
 log "Multi-Mouse ${version} | ${0} | ${1}"
-log "======================================="
+log "======================================================"
 
 case "$1" in
     start)
         log "${1}: Starting Multi-Mouse"
 		
-	log "Reseting previous logs"
-	rm -f $dir$logs$mmlog
-	rm -f $dir$logs$multimouselog
+		log "Reseting previous logs"
+		rm -f $dir$logs$mmlog
+		rm -f $dir$logs$multimouselog
 	
-	log "Let the system finish booting up..."
-	sleep $delay
+		log "Let the system finish booting up..."
+		sleep $delay
 	
-	$dir$scripts$mmgs init Welcome to the Jungle $version
+		$dir$scripts$mmgs init Welcome to the Jungle $version
 
-	log "Gentleman start your engines!"
+		log "Gentleman start your engines!"
         ($dir$mm $start $version) &
     ;;
     stop)
