@@ -21,7 +21,8 @@ Batocera.conf: Have seen the Batocera file get corrupted and when it happens, no
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
 1.  Insert a thumb drive to a Mac or PC
-2.  Format it using ExFat, name the disk `install`
+2.  Format it using ExFat
+3.  Name the disk `install`
 3.  Copy the `MM folder` to the thumb drive
 4.  Insert the thumb drive to your Batocera Linux box
 5.  Type `F1` to enter File Manager
