@@ -10,7 +10,7 @@ Like Batocera it's made to just play! Need to change your mouse configuration? W
 
 Known issue: The Apple Magic Trackpad by default has been removed from Virtual Multi-Mouse. This Trackpad slows down and Spinner and Trackball considerably. We recommend not using it. This trackpad also shows up as a ABS device with RetroArch logs v35 and v36. There is no mouse logging in v37, VMM no longer read RA logs. We currenty do not have the ability to distingush (REL) and (ABS) devices. In RetroArch 35 and 36 if you have --verbose logging turned on you can see which devices are ABS, if any. Hope to have a resolution on those devices soon. Currently only have seen Apple's devices at ABS. RetroArch orders (REL) devices first and (ABS) devices second.
 
-Virtual Multi-Mouse preflight has been removed and replaced with sophisticated central intelligance gathering. VMM is programmed to by smart. This takes time to get it right and thanks for your patience. This software aims to be a zero-config-solution. We want VMM to be Auto-Magic!
+Virtual Multi-Mouse preflight has been removed and replaced with sophisticated central intelligance gathering. VMM is programmed to be smart, very smart. This takes time and thanks for your patience. Who knows may be one day it will be a full blown AI for all your Arcade needs. I'd be happy if VMM made free coffee ☕️. This software aims to be a zero-config-solution. We want VMM to be Auto-Magic!
 
 Troubleshooting: If things are not working, try exiting your game and relaunching it. Sometimes and not often, VMM needs a jump start. If your mouse controllers are still not working, simply reboot Batocera. Still having trouble? Feel free to post an issue. I will respond as soon as possible.
 
