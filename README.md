@@ -16,8 +16,6 @@ Beginning with 1.0.9, at install Batocera.conf is set to be backed up. This is s
 
 The Apple Magic Trackpad by default has been removed from Virtual Multi-Mouse. This Trackpad slows down and other Spinner and Trackball considerably. We recommend not using it (if you do, we can help you white list it). This also shows up as an (ABS) device within RetroArch logs v35 and v36. There is currently no mouse logging in v37, so VMM no longer reads RA logs. RetroArch orders (REL) devices first and (ABS) devices second. It's possible ABS devices are all trackpads, tablets and/or touch screens and lightguns. If so, we will start determining based on type, order them accordingly add them to the back of the list, and publish the log file incase you need to know what indexes your ABS devices are on as RA logging may go away.
 
-Once we have all Absolute ABS device types determined
-
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
 0.  If you have smb// working, you can copy files over instead of sneaker net, curl this repo works also
