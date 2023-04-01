@@ -21,6 +21,8 @@ scripts='scripts/'
 mm="mm.sh"
 multi="multimouse.sh"
 custom='custom.sh'
+bat='batocera.conf'
+backup='batocera_backup.conf'
 
 case "$1" in
     -install)
@@ -33,11 +35,15 @@ case "$1" in
         rm -f $dir$custom
 		rm -f $dir$multi
 		rm -f $dir$scripts$mm
-	
-		echo copying files
+        rm -f $dir$backup
+		
+        echo copying files
         cp ./$custom $dir$custom
         cp ./$multi $dir$multi
         cp ./$mm $dir$scripts$mm
+        
+        #Backup batocera.conf
+        cp $dir$bat $dir$backup
 
 		echo updating permissions
 		chmod 755 $dir$custom
@@ -51,7 +57,8 @@ case "$1" in
         rm -f $dir$custom
 		rm -f $dir$multi
 		rm -f $dir$scripts$mm
-	
+        rm -f $dir$backup
+
 		echo uninstall complete
         ;;
     -restart)

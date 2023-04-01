@@ -6,10 +6,10 @@
 #  Virtual  
 #  Multi-Mouse
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.03.30
+#  Created by StarPlayrX | Todd Bruss on 2023.04.01
 #
 
-version='1.0.8'
+version='1.0.9'
 
 dir='/userdata/system/'
 scripts='scripts/'
@@ -24,8 +24,12 @@ stop='stop'
 delay=1
 rm -f $dir$logs$mmcustomlog
 
+ts() {
+    date +"%T"
+}
+
 log() {
-    (echo "${1}" | ts) >> $dir$logs$mmcustomlog
+    (echo "$(ts) ${1}") >> $dir$logs$mmcustomlog
 }
 
 log "======================================================"
@@ -36,16 +40,16 @@ case "$1" in
     start)
         log "${1}: Starting Multi-Mouse"
 		
-		log "Reseting previous logs"
-		rm -f $dir$logs$mmlog
-		rm -f $dir$logs$multimouselog
+	log "Reseting previous logs"
+	rm -f $dir$logs$mmlog
+	rm -f $dir$logs$multimouselog
 	
-		log "Let the system finish booting up..."
-		sleep $delay
+	log "Let the system finish booting up..."
+	sleep $delay
 	
-		$dir$scripts$mmgs init Welcome to the Jungle $version
+	$dir$scripts$mmgs init Welcome to the Jungle $version
 
-		log "Gentleman start your engines!"
+	log "Gentleman start your engines!"
         ($dir$mm $start $version) &
     ;;
     stop)
@@ -56,6 +60,7 @@ case "$1" in
         log "${0} No matching arguments: ${1}"
         echo ""
 	echo "Usage: ${0}  start  stop"
+	echo ""
    ;;
 esac
  

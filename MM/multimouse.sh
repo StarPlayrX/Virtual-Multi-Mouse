@@ -6,7 +6,7 @@
 #  Virtual
 #  Multi-Mouse
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.03.30
+#  Created by StarPlayrX | Todd Bruss on 2023.04.01
 #
 
 script='custom.sh'
@@ -24,8 +24,12 @@ mmlog='multimouse.log'
 logfile='retroarch.log'
 delay=1
 
+ts() {
+    date +"%T"
+}
+
 log() {
-    (echo "${1}" | ts) >> $sys$dir$mmlog
+    (echo "$(ts) ${1}") >> $sys$dir$mmlog
 }
 
 log "========================================================"
@@ -51,63 +55,38 @@ destroy() {
 } 
 case "$1" in
     start)
-	destroy
         log "${1}: Starting the virtual multi-mouse"        
     ;;
     stop)
-	destroy
         log "${1}: Stopping the virtual multi-mouse"
-        exit 0
-    ;;
-    *)
-    log "**!! No matching arguments ${0} ${1} !!**"
-	echo ''
-    echo "Usage: $0  start  stop"
-	echo ''
 	destroy
-	exit 0
+        exit 0
     ;;
 esac
 
-log "Counting physical mouse pointing devices"
-mi=$(ls -a | grep -c mouse | sort -u)
-log "Found $mi physical event mouse devices"
+# count usbmouse devices
+usbmouse=$(ls -a | grep -c mouse)
 
-# if no event-mouse devices are present sleep and re-run
-# to do make this a loop instead
-if [[ $mi == "0" ]] 
-then 
-    log "No event-mouse are present input devices, sleeping for 10 seconds..." 
-    sleep 10
-    ($sys$script start) &
-    exit 0
-fi
-
-# The watcher starts here:
-log "Checking for USB pointer devices..."
-
-hot=$(ls -a | grep -c mouse | sort -u)
-
-log "Monitor physical event-mouse devices"
-while [[ $hot == "0" ]]
+log "Monitoring physical usb mouse devices"
+while [[ $usbmouse == "0" ]]
 do
-    sleep $delay
-	hot=$(ls -a | grep -c mouse | sort -u)
-	log "No mouse devices, sleeping..."
-	sleep $delay
+    usbmouse=$(ls -a | grep -c usb)
+    log "No usb mouse devices found, sleeping..."
+    sleep 5
 done
 
 #ensure we are clean to start
 destroy
+sleep 2
 
 log "Gather all event mouse names"
-event_mouse=( $(ls -a | grep mouse | sort -u) )
+event_mouse=( $(ls -a | grep mouse) )
 
 # init_input arg array
 args=()
 
 log "Locating all mouse devices"
-log "Includes trackballs, non-Apple trackpads, mice, spinners, etc"
+log "Includes trackball, non-Apple trackpad, mouse, spinner, etc"
 
 # Apple Magic Trackpad's slow down Spinners and Trackballs
 # Therefore are removing from the Virtual Multi-Mouse
@@ -118,7 +97,7 @@ do
     log "** mouse: ${ev}"
 	case "${ev}" in
 	    *$apple*)
-	        log ":( Ignoring mouse input ${apple} :("      
+	        log "Ignoring mouse input ${apple} :("      
 	    ;;
 	    *)
 	    	log "Adding mouse Input ${ev}"
@@ -130,9 +109,8 @@ done
 log "Setting the physical mouse inputs"
 for arg in 
 do
-    log "*** arg: ${arg}"
+    log "${arg}"
 done
-
 
 count="${args[@]}}"
 
@@ -153,28 +131,27 @@ log "Creating our Virtual Multi-Mouse"
 sleep $delay
 log "Evsieve Started..."
 
-#log "Preflight Retroarch's mouse index - semi-hotswappable"
-#$sys$scr$vmm prep Get Ready Player One! $2
-
-#sleep $delay
-
-#log "Heat Seeking Missle Test Area..."
-#$sys$scr$vmm game Virtual Multi Mouse Rocks $2
+sys='/userdata/system/'
+spt='scripts/'
+vmm='mm.sh'
+$sys$spt$vmm init We are the Champions $1
 
 # The watcher starts here:
 log "Starting the USB watcher..."
 
-hot=$(ls -a | grep mouse | sort -u)
+hot=$(ls -a | grep usb)
 swp=$hot
 
 log "Monitor physical event-mouse devices"
 while [[ $hot == $swp ]]
 do
     sleep $delay
-    swp=$(ls -a | grep mouse | sort -u)
+    swp=$(ls -a | grep usb)
 	sleep $delay
 done
 
-(kill -9 $! | ts) >> $sys$dir$mmlog 2>&1 &
+destroy
+sleep 2
+##(kill -9 $! | ts) >> $sys$dir$mmlog 2>&1 &
 log "Restarting Virtual Multi-Mouse..."
 ($sys$script start) &
