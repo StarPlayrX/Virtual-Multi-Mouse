@@ -18,7 +18,8 @@ At install Batocera.conf is set to be backed up. This is safegard incase somethi
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
-1.  Insert a thumb drive to a Mac or PC (If you have smb// working, you can copy files over that way as well)
+0.  If you have smb// working, you can copy files over instead of sneaker net, curl this repo works also
+1.  Insert a thumb drive to a Mac or PC 
 2.  Format it using ExFat, name the disk `install`
 3.  Copy the `MM folder` to the thumb drive
 4.  Insert the thumb drive to your Batocera Linux box
@@ -28,16 +29,9 @@ At install Batocera.conf is set to be backed up. This is safegard incase somethi
 8.  `chmod 755 install.sh` #may not be needed
 9.  `./install.sh -install`
 10.  `reboot`
-11.  or try install of rebooting
-12.  `cd /userdata/system`
-13.  `./custom.sh start`
-14.  `exit`
-15.  `control-Q`
-16.  Enjoy your new multi-mouse!
 
 ## 🐭👾🖲️ Manual install instructions coming soon.
-
-0. Until there here it is in a nutshell
+0. Until here is a brief summary
 1. mm.sh goes in /userdata/system/scripts/ needs `chmod +x` or `755` rights
 2. multimouse.sh and custom.sh goes in /userdata/system/ needs `chmod +x` or `755` rights
 3. go to terminal, `cd /userdata/system`
@@ -67,5 +61,4 @@ At install Batocera.conf is set to be backed up. This is safegard incase somethi
 * https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index/27
 
 ## 🐭👾🖲️ Coming Soon
-
 * Pacman package manager packages.
