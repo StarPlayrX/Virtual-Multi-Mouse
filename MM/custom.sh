@@ -6,10 +6,10 @@
 #  Virtual  
 #  Multi-Mouse
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.04.01
+#  Created by StarPlayrX | Todd Bruss on 2023.04.03
 #
 
-version='1.0.10'
+version='1.1.0'
 
 dir='/userdata/system/'
 mm='multimouse.sh'

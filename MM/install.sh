@@ -6,13 +6,13 @@
 #  Virtual
 #  Multi-Mouse
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.03.30
+#  Created by StarPlayrX | Todd Bruss on 2023.04.03
 #
 
 # todo: Add logging to the installer
 # todo: Create a package instead of an installer
 
-version='1.0.8'
+version='1.1.0'
 
 dir="/userdata/system/"
 scripts='scripts/'

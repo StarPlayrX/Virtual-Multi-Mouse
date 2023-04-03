@@ -6,12 +6,12 @@
 #  Virtual
 #  Multi-Mouse
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.04.01
+#  Created by StarPlayrX | Todd Bruss on 2023.04.03
 #
 # Reference
 # https://wiki.batocera.org/launch_a_script
 
-version='1.0.10'
+version='1.1.0'
 
 vmm='Virtual_Multi_Mouse'
 sys='/userdata/system/'
@@ -23,6 +23,10 @@ vmm_log='mm.log'
 
 separator="============================================================================"
 secondary="----------------------------------------------------------------------------"
+
+# init
+relative=()
+absolute=()
 
 ts() {
     date +"%T"
@@ -41,20 +45,75 @@ log "  Engine : ${4}"
 log "     ROM : ${5}"               
 log $secondary
 
-update() {
+# behavior - evmapy will always try to fill an empty event mouse slot
+# if there are no empty slots, evmapy will add a slot at the end
+# evampy is an event mangager that Batocera uses for keyboard and game controller mappings
+# virtual multi-mouse does not use evmapy for its virtual mouse, be must account for evmapy's positioing
+
+map_ai() {
+ 
+    mapfile -t evmap_array < <(/usr/bin/evmapy --list-all | sort -V)
+   
+    c=$(cat /tmp/evmapy.txt)
+    y=0
+    f=0
+  
+    for z in "${evmap_array[@]}" 
+    do
+        # we can catch this running with a delay in a subshell
+        if echo $z | grep -q "evmapy"
+	then
+           log "${z} confirmed"
+ 	   echo $y > /tmp/evmapy.txt
+           f=1
+           break
+        else
+	   log "${z}"
+        fi
+  
+	# gap detected
+        if ! echo $z | grep -q "dev/input/event${y}"
+        then
+
+            if [[ $c == $y ]] 
+	    then
+	       log "/dev/input/event${y}: evmapy confirmed-"
+	    else 
+ 	       log "/dev/input/event${y}: evmapy empty slot"
+	    fi
+
+            f=1
+            break
+        fi
+        ((y++))
+    done
+
+    if [[ $f == 0 ]]
+    then
+         # on game end we can compare notes and confirm
+         if [[ $c == $y ]] 
+	 then
+	    log "/dev/input/event${y}: evmapy confirmed+"
+	        else 
+ 	    log "/dev/input/event${y}: evmapy added"
+         fi
+    fi
+
+    relative["${y}"]="evmapy"
+}
+
+
+vmm_ai() {
     cd ${dest}
 	
-    log "usb Virtual Mouse Tracker & udev Reader"
-    log "(c) 2023 by Todd Bruss | StarPlayrX.com"
+    log "Virtual Multi-Mouse Central Intelligence"
+    log "(c) 2023 by Todd Bruss | GTX | StarPlayX"
     
     event_mouse=($(ls -a | grep mouse))
 
     log $secondary
     
     # init usb mouse array  
-    relative=()
-    #absolute=()
-
     #log "Locating all relative mouse devices"
     #log "Includes trackball, mouse & spinner"
 
@@ -68,10 +127,8 @@ update() {
 	if [[ $rel == "1" ]]
 	then
 	    relative[key]="${mouse_name}"
-	    #echo "rel $key ${relative[key]}"
 	else
 	    absolute[key]="${mouse_name}"
-	    #echo "abs $key ${absolute[key]}"
 	fi
     done
  
@@ -79,31 +136,9 @@ update() {
     evt=$(/usr/bin/udevadm info $dest${vmm} -q name)
     key=$(echo ${evt} | sed 's/[^0-9]*//g')
     relative[key]="${vmm}"
-        
-    #evmapy is a pain in the rear
-    mapfile -t x < <(/usr/bin/evmapy --list-all | sort -V)
+}
 
-    y=0
-
-    found=0
-
-    for z in "${x[@]}" 
-    do
-        if ! echo $z | grep -q "dev/input/event${y}"
-        then
-            found=1
-            break
-        fi
-        ((y++))
-    done
-
-    if [[ $found == 0 ]]
-    then
-        ((y++))
-    fi
-
-    relative["${y}"]="evmapy"
- 
+dev_ai() {
     ## Sort relative
     for key in "${!relative[@]}"
     do 
@@ -115,10 +150,12 @@ update() {
     do  
 	echo "$key ${absolute[$key]}"
     done | sort -V #-k1    
+}
 
+usb_ai() {
     # Loop through the sorted array and get the index and value
     
-    mouse=0 
+    mighty=0 
     index=0
 
     for item in "${relative[@]}"
@@ -127,7 +164,8 @@ update() {
 
  	if [[ $item == $vmm ]] 
 	then
-            mouse=$index	     
+    	    ((mighty=$index))     
+            $set $one $mighty
         fi	 
         ((index++))
     done
@@ -135,10 +173,8 @@ update() {
     if [[ $mouse == 0 ]]
     then
 	log "Could not set the global index for player one"
-    else
-	$set $one $mouse
-	log $secondary 
-        log "Success: ${set} ${one} ${mouse}"
+    else 
+        log "Success: ${set} ${one} ${mighty}"
     fi
 
     #((index++))
@@ -150,16 +186,36 @@ update() {
     done
 }
 
+start() { 
+    # sleep hooks into evmapy
+    sleep 0.666    
+    vmm_ai
+    map_ai
+    dev_ai
+    usb_ai 
+}
+
+stop() { 
+    vmm_ai
+    map_ai
+    dev_ai
+    usb_ai  
+}
+
 case $1 in
     gameStart)
-	update 
+	#& hooks into evmapy
+	start & 
     ;;
-    gameStop|pregame|init)
-	update	
+    gameStop)
+	stop
+    ;;
+    pregame)
+	start	
     ;;
     *)
     echo
-    echo "Usage  ${0}  gameStart  gameStop  init  pregame"
+    echo "Usage  ${0}  gameStart  gameStop  pregame"
     echo
     ;;
 esac

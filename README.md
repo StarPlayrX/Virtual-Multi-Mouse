@@ -1,4 +1,4 @@
-# 🐭👾🖲️ Virtual Multi-Mouse 1.0.10 🖲️👾🐭
+# 🐭👾🖲️ Virtual Multi-Mouse 1.1.0 🖲️👾🐭
 
 The best auto-config solution on the planet for combining your spinner, trackball, mouse into one virtual mouse! Written from the ground up with hightly intelligent code.
 
@@ -18,7 +18,9 @@ Virtual Multi-Mouse natively supports relative usb devices this includes mouse, 
 
 Known issue: There is a slow down when combining absolute Apple Magic Trackpads with relative mice. For now absolute devices are turned off.
 
-Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices and the pesky evmapy that Batocera seems to insert itself where ever there is an empty event slot. Because of this, we strongly encourage leaving your devices alone once Batocera is up and running. VMM will try to predict where evmapy will go. Evmapy will be at the last slot upon startup, but if you remove and replace any usb device including keyboards, evmapy will take that empty slot. When devices are removed or added, VMM will recreate itself. Unfortunately, this can cause some issues and rebooting may be needed to recover. 
+Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices.
+
+When a game starts, Batocera inserts evmapy to the next avaiable usb slot. This usually gets added at the end, but if you remove any usb device, evampy on the next game will consume that space. VMM is now smart enough to deal with this chaos. While we still encourage leaving your usb devices along while running Batoceara, VMM is getting smarter by the day.
 
 Each version gets better and better!
 

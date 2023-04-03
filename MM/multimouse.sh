@@ -5,8 +5,10 @@
 #  Virtual
 #  Multi-Mouse
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.04.01
+#  Created by StarPlayrX | Todd Bruss on 2023.04.03
 #
+
+# version="1.1.0"
 
 script='multimouse.sh'
 input='--input'
@@ -33,7 +35,7 @@ log() {
 separator="========================================================"
 
 log $separator
-log "VMM 1.0.10: ${0} ${1} ${2}"
+log "VMM 1.0.11: ${0} ${1} ${2}"
 log $separator
 
 log "Switching to ${dest} directory"
