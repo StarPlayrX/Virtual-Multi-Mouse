@@ -1,20 +1,26 @@
 # 🐭👾🖲️ Virtual Multi-Mouse 1.0.10 🖲️👾🐭
 
-The best auto-config solution for combining your spinner, trackball, mouse and lightguns into one virtual mouse! Written from the ground up. RetroArch golden age arcade gaming on Batocera here we go!
+The best auto-config solution on the planet for combining your spinner, trackball, mouse into one virtual mouse! Written from the ground up with hightly intelligent code.
 
 ## 🐭👾🖲️ Get Ready Player One!
 
-Virtual Multi-Mouse auto configures trackball, spinner, mouse, lightgun into one virtual device. Multi-Mouse works with Batocera v35 or later. Recently tested on v35, v36 and v37.
+Virtual Multi-Mouse auto configures trackball, spinner, mouse into one virtual device. Multi-Mouse works with Batocera v35 or later. Recently tested on v35, v36 and v37. Official lightgun support is coming soon!
 
-Like Batocera it's made to just play! Need to change your mouse configuration? Within a flash it sets up the virtual mouse accordingly. All you need to do is run a game! Multi-Mouse intelligently determines RetroArch's global mouse config for player 1 games.
+Like Batocera, it's made to just play! Need to change your mouse configuration? Within a flash VMM sets up the virtual mouse accordingly. All you need to do is reboot and run a game! The software automatically determines the proper mouse config for player 1 games.
 
-Virtual Multi-Mouse preflight has been removed and replaced with sophisticated central intelligance gathering. VMM is programmed to be smart, very smart. This takes time and thanks for your patience. Who knows may be one day it will be a full blown AI for all your Arcade needs. I'd be happy if VMM just made free ☕️ and 🍩. This software aims to be a zero-config-solution. We want VMM to be Auto-Magic!
+Virtual Multi-Mouse uses sophisticated central intelligance gathering. VMM is programmed to be smart, very smart. Upon every fresh reboot, it does a great job reconfiguring all your mouse devices. This software aims to be a zero-config-solution. We want VMM to be Auto-Magic!
 
-Troubleshooting: If things are not working, try exiting your game and relaunching it. Sometimes and not often, VMM needs a jump start. If your mouse controllers are still not working, simply reboot Batocera. Still having trouble? Feel free to post an issue. I will respond as soon as possible.
+Troubleshooting: If things are not working, try exiting your game and relaunching it. Sometimes VMM needs a jump start. If your mouse controllers are still not working, simply reboot Batocera. Still having trouble? Feel free to post an issue.
 
-Beginning with 1.0.10, at install Batocera.conf is set to be backed up. This is safegard incase something happens to this file. Virtual Multi-Mouse sets the global index here for EmulationStation and RetroArch configure. In the future, VMM will also include a clean batocera backup file. We plan to start packaging VMM and we may not be able to back up a file within a pacman pkg.
+Beginning with 1.0.10, at install Batocera.conf is set to be backed up. This is safegard incase something happens to this file. Virtual Multi-Mouse sets the global index here for EmulationStation and RetroArch to configure.
 
-The Apple Magic Trackpad by default has been removed from Virtual Multi-Mouse. This Trackpad slows down and other Spinner and Trackball considerably. We recommend not using it (if you do, we can help you white list it). This also shows up as an (ABS) device within RetroArch logs v35 and v36. There is currently no mouse logging in v37, so VMM no longer reads RA logs. RetroArch orders (REL) devices first and (ABS) devices second. It's possible ABS devices are all trackpads, tablets and/or touch screens and lightguns. If so, we will start determining based on type, order them accordingly add them to the back of the list, and publish the log file incase you need to know what indexes your ABS devices are on as RA logging may go away.
+Virtual Multi-Mouse natively supports relative usb devices this includes mouse, trackballs and spinners. We currently do not support absolute devices which are trackpads, lightguns and touch screens. Starting with 1.1.1 be adding official support for absolute devices soon! We plan to include a configuration file that allows the user to determine which types of devices they want within their configuration. It will be something like mouse=1, lightgun=1, trackpad=0, rel=1, abs=1, etc.
+
+Known issue: There is a slow down when combining absolute Apple Magic Trackpads with relative mice. For now absolute devices are turned off.
+
+Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices and the pesky evmapy that Batocera seems to insert itself where ever there is an empty event slot. Because of this, we strongly encourage leaving your devices alone once Batocera is up and running. VMM will try to predict where evmapy will go. Evmapy will be at the last slot upon startup, but if you remove and replace any usb device including keyboards, evmapy will take that empty slot. When devices are removed or added, VMM will recreate itself. Unfortunately, this can cause some issues and rebooting may be needed to recover. 
+
+Each version gets better and better!
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
