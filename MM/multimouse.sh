@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #
 #  multimouse.sh
 #
@@ -9,19 +8,18 @@
 #  Created by StarPlayrX | Todd Bruss on 2023.04.01
 #
 
-script='custom.sh'
+script='multimouse.sh'
 input='--input'
 dest='/dev/input/by-id/'
 sys='/userdata/system/'
 scr='scripts/'
-vmm='mm.sh'
+mmsh='mm.sh'
 output='--output'
-mm='Virtual_Multi_Mouse'
+vmm='Virtual_Multi_Mouse'
 name='name='
 create='create-link='
 dir='/logs/'
-mmlog='multimouse.log'
-logfile='retroarch.log'
+mm_log='multimouse.log'
 delay=1
 
 ts() {
@@ -29,29 +27,32 @@ ts() {
 }
 
 log() {
-    (echo "$(ts) ${1}") >> $sys$dir$mmlog
+    (echo "$(ts) ${1}") >> $sys$dir$mm_log
 }
 
-log "========================================================"
-log "Multi-Mouse ${2} ${0} | ${1}"
-log "========================================================"
+separator="========================================================"
+
+log $separator
+log "VMM 1.0.10: ${0} ${1} ${2}"
+log $separator
 
 log "Switching to ${dest} directory"
 cd ${dest}
 
 destroy() {
+    log "Halting evsieve"
+    /usr/bin/killall evsieve
 
-    log "Halting Evsieve"
-    (killall evsieve | ts) >> $sys$dir$mmlog 2>&1 &
-
-    multi_mouse_exists=$(ls -a | grep -c $mm | sort -u)
+    multi_mouse_exists=$(ls -a | grep -c $vmm | sort -u)
     log "Checking if symlink exits..."	
 	
     if [[ $multi_mouse_exists == "1" ]]
     then
         log "Removing symbolic link"
-        rm $mm
+        rm $vmm
     fi
+ 
+    sleep $delay
 } 
 case "$1" in
     start)
@@ -77,64 +78,35 @@ done
 
 #ensure we are clean to start
 destroy
-sleep 2
 
-log "Gather all event mouse names"
 event_mouse=( $(ls -a | grep mouse) )
 
 # init_input arg array
 args=()
 
-log "Locating all mouse devices"
-log "Includes trackball, non-Apple trackpad, mouse, spinner, etc"
+log "Locating all relative mouse types"
+log "Includes trackball, mouse and spinner"
 
-# Apple Magic Trackpad's slow down Spinners and Trackballs
-# Therefore are removing from the Virtual Multi-Mouse
-apple='Magic_Trackpad' # We may map the clicks and discard the tracking
-
-for ev in "${event_mouse[@]}"
-do 
-    log "** mouse: ${ev}"
-	case "${ev}" in
-	    *$apple*)
-	        log "Ignoring mouse input ${apple} :("      
-	    ;;
-	    *)
-	    	log "Adding mouse Input ${ev}"
-			args+=("${input} ${dest}${ev}")
-	    ;;
-	esac
-done 
-
-log "Setting the physical mouse inputs"
-for arg in 
+#abs usb devices are not yet implemented
+for mouse_name in "${event_mouse[@]}"
 do
-    log "${arg}"
+    rel=$(/usr/bin/udevadm info -q property ${dest}${mouse_name}* | grep -ic "id_input_mouse=1")
+    if [[ $rel == "1" ]]
+    then
+        args+=("${input} ${dest}${mouse_name}")
+    else
+        log "abs ${mouse_name} is not supported at this time"
+    fi
 done
-
-count="${args[@]}}"
-
-#log "This value is our initial global mouse index for player one" 
-#log "Set global.retroarch.input_player1_mouse_index ${mi}" 
-
-#batocera-settings-set global.retroarch.input_player1_mouse_index $int
-#log "batocera-settings-set global.retroarch.input_player1_mouse_index ${count}"
-
-args+=("${output} ${name}${mm} ${create}${dest}${mm}")
-
-log "Setting the virtual mouse output"
-log "${output} ${name}${mm} ${create}${dest}${mm}"
+args+=("${output} ${name}${vmm} ${create}${dest}${vmm}")
 
 log "Creating our Virtual Multi-Mouse"
-(evsieve ${args[@]} | ts) >> $sys$dir$mmlog 2>&1 &
+evs=$(evsieve ${args[@]}) &
+log $evs
 
-sleep $delay
 log "Evsieve Started..."
 
-sys='/userdata/system/'
-spt='scripts/'
-vmm='mm.sh'
-$sys$spt$vmm init We are the Champions $1
+$sys$scr$mmsh pregame Get Ready Player One!
 
 # The watcher starts here:
 log "Starting the USB watcher..."
@@ -145,13 +117,13 @@ swp=$hot
 log "Monitor physical event-mouse devices"
 while [[ $hot == $swp ]]
 do
-    sleep $delay
+    sleep 5
     swp=$(ls -a | grep usb)
-	sleep $delay
 done
 
+log "Cleaning up our mess"
 destroy
-sleep 2
-##(kill -9 $! | ts) >> $sys$dir$mmlog 2>&1 &
+cobra=$(kill -9 $!)
+log $cobra
 log "Restarting Virtual Multi-Mouse..."
-($sys$script start) &
+$sys$script start

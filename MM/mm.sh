@@ -11,104 +11,143 @@
 # Reference
 # https://wiki.batocera.org/launch_a_script
 
-vmm='Virtual_Multi_Mouse'
-logfile="retroarch.log"
-dir='/userdata/system/logs/'
-logfile='retroarch.log'
-cmd='batocera-settings-set'
-input='global.retroarch.input_player1_mouse_index'
-err='Error: mouse not found'
-mmlog='mm.log'
-delay=1
+version='1.0.10'
 
-# todo clean up on aisle 6
-dest='/dev/input/by-id/'
+vmm='Virtual_Multi_Mouse'
 sys='/userdata/system/'
-mm='Virtual_Multi_Mouse'
+dir='logs/'
+dest='/dev/input/by-id/'
+set='batocera-settings-set'
+one='global.retroarch.input_player1_mouse_index'
+vmm_log='mm.log'
+
+separator="============================================================================"
+secondary="----------------------------------------------------------------------------"
 
 ts() {
     date +"%T"
 }
 
 log() {
-    (echo "$(ts) ${1}") >> $dir$mmlog
+    (echo "$(ts) ${1} ${2}") >> $sys$dir$vmm_log
 }
 
-log "==========================================================================="
-log "Multi-Mouse ${6} | ${0} | ${1}"
-log "Platform: ${2}"
-log " Library: ${3}"
-log "  Engine: ${4}"
-log "     ROM: ${5}"               
-log "==========================================================================="
+log $separator
+log "VMM vers : $version" 
+log " Runtime : ${0} ${1}"
+log "Platform : ${2}"
+log " Library : ${3}"
+log "  Engine : ${4}"
+log "     ROM : ${5}"               
+log $secondary
 
 update() {
     cd ${dest}
-
-    log "Virtual USB Mouse Tracker by StarPlayrX"
-    log "(C) 2023 by Todd Bruss | StarPlayrX.com"
+	
+    log "usb Virtual Mouse Tracker & udev Reader"
+    log "(c) 2023 by Todd Bruss | StarPlayrX.com"
+    
     event_mouse=($(ls -a | grep mouse))
 
+    log $secondary
+    
     # init usb mouse array  
-    physical=()
+    relative=()
+    #absolute=()
 
-    log "Locating all mouse devices"
-    log "Includes trackball, trackpad, mouse, spinner, etc"
+    #log "Locating all relative mouse devices"
+    #log "Includes trackball, mouse & spinner"
 
     #Get everymouse
     for mouse_name in "${event_mouse[@]}"
     
     do   
+	rel=$(/usr/bin/udevadm info -q property ${dest}${mouse_name}* | grep -ic "id_input_mouse=1")
         event=$(/usr/bin/udevadm info ${dest}${mouse_name} -q name)
         key=$(echo ${event} | sed 's/[^0-9]*//g')
-        log "${key} ${mouse_name} ${event}"
-        physical[key]="${mouse_name}"
+	if [[ $rel == "1" ]]
+	then
+	    relative[key]="${mouse_name}"
+	    #echo "rel $key ${relative[key]}"
+	else
+	    absolute[key]="${mouse_name}"
+	    #echo "abs $key ${absolute[key]}"
+	fi
     done
-
+ 
     #Get our Virtual_Mouse
-    log "Virtual Mouse: ${mm}"
-    evt=$(/usr/bin/udevadm info $dest${mm} -q name)
+    evt=$(/usr/bin/udevadm info $dest${vmm} -q name)
     key=$(echo ${evt} | sed 's/[^0-9]*//g')
-    physical[key]="${mm}"
+    relative[key]="${vmm}"
+        
+    #evmapy is a pain in the rear
+    mapfile -t x < <(/usr/bin/evmapy --list-all | sort -V)
 
-    # Sort the array by key
-    sorted_by_key=$(for key in "${!physical[@]}"; do echo "$key ${physical[$key]}"; done | sort -k1)
-    log "Sorted by key:${sorted_by_key}"
+    y=0
 
-    #Apple's Trackpad is an ABS device. We need to remove it from the index.
-    apple='Magic_Trackpad' # Figure out how (REL) and (ABS) are ID'd
-    
-    # Loop through the sorted array and get the index and value
-    index=0
-    mighty_mouse=0
-    for item in "${physical[@]}"
+    found=0
+
+    for z in "${x[@]}" 
     do
-         log "Mouse $index#: $item"
-	 
-         # This is our exception list
-	 case "${item}" in
-	    *$apple*)
-	        log "Ignoring mouse input ${apple} (ABS)"      
-	    ;;
-	    *)
-	    	log "Adding mouse Input (REL) ${ev}"
-		
- 	 	if [[ $item == $mm ]] 
-		then
-                    $cmd $input $index 
-                    log "Success: ${cmd} ${input} ${index}"
-	            mighty_mouse=1	     
-	        fi	 
-                ((index++))
-	    ;;
-	esac
-
+        if ! echo $z | grep -q "dev/input/event${y}"
+        then
+            found=1
+            break
+        fi
+        ((y++))
     done
 
-    if [[ $mighty_mouse == 0 ]]
+    if [[ $found == 0 ]]
     then
-	log "Could not set Virtual Multi-Mouse"
+        ((y++))
     fi
+
+    relative["${y}"]="evmapy"
+ 
+    ## Sort relative
+    for key in "${!relative[@]}"
+    do 
+	echo "$key ${relative[$key]}"
+    done | sort -V #-k1
+    
+    ## Sort absolute 
+    for key in "${!absolute[@]}"
+    do  
+	echo "$key ${absolute[$key]}"
+    done | sort -V #-k1    
+
+    # Loop through the sorted array and get the index and value
+    
+    mouse=0 
+    index=0
+
+    for item in "${relative[@]}"
+    do 
+	log "rel #${index}: ${item}"
+
+ 	if [[ $item == $vmm ]] 
+	then
+            mouse=$index	     
+        fi	 
+        ((index++))
+    done
+       
+    if [[ $mouse == 0 ]]
+    then
+	log "Could not set the global index for player one"
+    else
+	$set $one $mouse
+	log $secondary 
+        log "Success: ${set} ${one} ${mouse}"
+    fi
+
+    #((index++))
+  
+    for item in "${absolute[@]}"
+    do 
+	log "abs #${index}: ${item}"	 
+        ((index++)) 
+    done
 }
 
 case $1 in
@@ -119,8 +158,8 @@ case $1 in
 	update	
     ;;
     *)
-    echo ""
+    echo
     echo "Usage  ${0}  gameStart  gameStop  init  pregame"
-    echo ""
+    echo
     ;;
 esac

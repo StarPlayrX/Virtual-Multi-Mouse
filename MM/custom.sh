@@ -9,31 +9,31 @@
 #  Created by StarPlayrX | Todd Bruss on 2023.04.01
 #
 
-version='1.0.9'
+version='1.0.10'
 
 dir='/userdata/system/'
-scripts='scripts/'
 mm='multimouse.sh'
-mmgs='mm.sh'
-mmlog='mm.log'
-multimouselog='multimouse.log'
-mmcustomlog='mm_custom.log'
-logs='/logs/'
+mmsh='mm.sh'
+mm_log='mm.log'
+multimouse_log='multimouse.log'
+mmcustom_log='mm_custom.log'
+
+logs='logs/'
 start='start'
 stop='stop'
-delay=1
-rm -f $dir$logs$mmcustomlog
+
+rm -f $dir$logs$mmcustom_log
 
 ts() {
     date +"%T"
 }
 
 log() {
-    (echo "$(ts) ${1}") >> $dir$logs$mmcustomlog
+    (echo "$(ts) ${1}") >> $dir$logs$mmcustom_log
 }
 
 log "======================================================"
-log "Multi-Mouse ${version} | ${0} | ${1}"
+log "VMM ${version} | ${0} | ${1}"
 log "======================================================"
 
 case "$1" in
@@ -41,26 +41,21 @@ case "$1" in
         log "${1}: Starting Multi-Mouse"
 		
 	log "Reseting previous logs"
-	rm -f $dir$logs$mmlog
-	rm -f $dir$logs$multimouselog
-	
-	log "Let the system finish booting up..."
-	sleep $delay
-	
-	$dir$scripts$mmgs init Welcome to the Jungle $version
+	rm -f $dir$logs$mm_log
+	rm -f $dir$logs$multimouse_log
 
-	log "Gentleman start your engines!"
+	log "Entering the Multi-Verse"
         ($dir$mm $start $version) &
     ;;
     stop)
-        log "${1}: Stopping Multi-Mouse"
+        log "${1}: Exiting the Multi-Verse"
         ($dir$mm $stop $version) &
     ;;
       *)
         log "${0} No matching arguments: ${1}"
-        echo ""
+        echo
 	echo "Usage: ${0}  start  stop"
-	echo ""
+	echo
    ;;
 esac
  
