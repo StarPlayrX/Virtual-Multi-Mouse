@@ -20,7 +20,7 @@ Known issue: There is a slow down when combining absolute Apple Magic Trackpads 
 
 Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices.
 
-When a game starts, Batocera inserts evmapy to the next avaiable usb slot. This usually gets added at the end, but if you remove any usb device, evampy on the next game will consume that space. VMM is now smart enough to deal with this chaos. While we still encourage leaving your usb devices along while running Batoceara, VMM is getting smarter by the day.
+When a game starts, Batocera inserts evmapy to the next avaiable usb slot. This usually gets added at the end, but if you remove any usb device, evampy on the next game will consume that space. VMM is now smart enough to deal with this chaos. While we still encourage leaving your usb devices alone while running Batoceara, VMM is getting smarter by the day and is able to take on these new challenges.
 
 Each version gets better and better!
 
