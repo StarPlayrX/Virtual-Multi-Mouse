@@ -16,7 +16,7 @@ Beginning with 1.0.10, at install Batocera.conf is set to be backed up. This is 
 
 Virtual Multi-Mouse natively supports relative usb devices this includes mouse, trackballs and spinners. We currently do not support absolute devices which are trackpads, lightguns and touch screens. These are absolute devices. Starting with 1.1.1 be adding official support for known abs devices. We plan to include a configuration file that allows the user to determine which types of devices they want combined, and this may include further ways to manage games such as, I want X.zip to have Y.gun, etc, without needing to know its complex name or wavering index. The global config will be something like mouse=1, lightgun=1, touchpad=0. and we may have separate assignments for gun games, spinner games and trackball games in the near future, depending on what game data we can collect autmatically.
 
-Known issue: There is a slow down when combining absolute Apple Magic Trackpads with relative mice. For now absolute devices are turned off.
+Known issue: There is a slow down when combining absolute Apple Magic Trackpads with relative mice. For now absolute devices are turned off. Version 1.1.1 will introduce a mm.conf file that will allow which types of devices are combined and possibly more granular control without makes things too complex. 
 
 Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices.
 
