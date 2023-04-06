@@ -6,13 +6,13 @@
 #  Virtual
 #  Multi-Mouse
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.04.03
+#  Created by StarPlayrX | Todd Bruss on 2023.04.06
 #
 
 # todo: Add logging to the installer
 # todo: Create a package instead of an installer
 
-version='1.1.0'
+version='1.1.2'
 
 dir="/userdata/system/"
 scripts='scripts/'
@@ -23,6 +23,10 @@ multi="multimouse.sh"
 custom='custom.sh'
 bat='batocera.conf'
 backup='batocera_backup.conf'
+
+echo
+echo "Welcome to Virtual Multi-Mouse ${version}"
+echo
 
 case "$1" in
     -install)

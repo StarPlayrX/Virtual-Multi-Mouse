@@ -6,12 +6,12 @@
 #  Virtual
 #  Multi-Mouse
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.04.03
+#  Created by StarPlayrX | Todd Bruss on 2023.04.06
 #
 # Reference
 # https://wiki.batocera.org/launch_a_script
 
-version='1.1.0'
+version='1.1.2'
 
 vmm='Virtual_Multi_Mouse'
 sys='/userdata/system/'

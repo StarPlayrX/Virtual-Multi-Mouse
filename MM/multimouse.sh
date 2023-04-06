@@ -5,10 +5,10 @@
 #  Virtual
 #  Multi-Mouse
 #
-#  Created by StarPlayrX | Todd Bruss on 2023.04.03
+#  Created by StarPlayrX | Todd Bruss on 2023.04.06
 #
 
-# version="1.1.0"
+version="1.1.2"
 
 script='multimouse.sh'
 input='--input'
@@ -35,7 +35,7 @@ log() {
 separator="========================================================"
 
 log $separator
-log "VMM 1.0.11: ${0} ${1} ${2}"
+log "VMM ${version}: ${0} ${1} ${2}"
 log $separator
 
 log "Switching to ${dest} directory"
@@ -113,14 +113,25 @@ $sys$scr$mmsh pregame Get Ready Player One!
 # The watcher starts here:
 log "Starting the USB watcher..."
 
+# check if game is running
+map=$(evmapy --list-all | grep -c evmapy)
+
 hot=$(ls -a | grep usb)
 swp=$hot
 
-log "Monitor physical event-mouse devices"
+log "Monitor physical event-mouse devices and if game is running"
 while [[ $hot == $swp ]]
 do
     sleep 5
-    swp=$(ls -a | grep usb)
+
+    map=$(evmapy --list-all | grep -c evmapy)
+
+    if [[ $map == "0" ]]
+    then
+       swp=$(ls -a | grep usb)
+    else
+	sleep 10
+    fi
 done
 
 log "Cleaning up our mess"
