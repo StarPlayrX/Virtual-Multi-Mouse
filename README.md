@@ -24,8 +24,8 @@ Each version of Virtual Multi-Mouse gets better and better! Our goal is to have 
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
-a.  If you have smb:// file sharing working, you can copy files over instead of sneaker net (instructions to follow)
-b.  you can curl this repo as well (will post instructions soon)
+0.  If you have smb:// file sharing working, you can copy files over instead of sneaker net (instructions to follow)
+1.  you can curl this repo as well (will post instructions soon)
 2.  Insert a thumb drive to a Mac or PC 
 3.  Format it using ExFat, name the disk `install`
 4.  Copy the `MM folder` to the thumb drive
