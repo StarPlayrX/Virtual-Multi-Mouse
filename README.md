@@ -69,5 +69,5 @@ Each version of Virtual Multi-Mouse gets better and better! Our goal is to have 
 * https://forums.libretro.com/t/configuring-ra-for-multi-mouse-spinners-lightguns-tackballs/12619E
 * https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index
 
-## 🐭👾🖲️ Coming Soon
+## 🐭👾🖲️ To Do
 * Pacman package manager packages.
