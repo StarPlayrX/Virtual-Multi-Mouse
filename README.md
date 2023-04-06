@@ -1,6 +1,6 @@
 # 🐭👾🖲️ Virtual Multi-Mouse 1.1.0 🖲️👾🐭
 
-The best auto-config solution on the universe. Combines your spinner, trackball, mouse into a virtual multi-mouse! Written from the ground up with intelligent code. Designed for Batocera Linux for use with Emulation Station and RetroArch.
+The best auto-config solution on the universe. Combines your spinner, trackball, mouse into a virtual multi-mouse! Written from the ground up using intelligent code. Designed for Batocera Linux for use with Emulation Station and RetroArch.
 
 ## 🐭👾🖲️ Get Ready Player One!
 
