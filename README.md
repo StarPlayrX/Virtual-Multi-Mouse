@@ -24,17 +24,18 @@ Each version of Virtual Multi-Mouse gets better and better! Our goal is to have 
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
-0.  If you have smb// working, you can copy files over instead of sneaker net, curl this repo works also
-1.  Insert a thumb drive to a Mac or PC 
-2.  Format it using ExFat, name the disk `install`
-3.  Copy the `MM folder` to the thumb drive
-4.  Insert the thumb drive to your Batocera Linux box
-5.  Type `F1` to enter File Manager
-6.  Navigate to /Applications and open Xterm
-7.  `cd /media/install/MM`
-8.  `chmod 755 install.sh` #may not be needed
-9.  `./install.sh -install`
-10.  `reboot`
+a.  If you have smb:// file sharing working, you can copy files over instead of sneaker net (instructions to follow)
+b.  you can curl this repo as well (will post instructions soon)
+2.  Insert a thumb drive to a Mac or PC 
+3.  Format it using ExFat, name the disk `install`
+4.  Copy the `MM folder` to the thumb drive
+5.  Insert the thumb drive to your Batocera Linux box
+6.  Type `F1` to enter File Manager
+7.  Navigate to /Applications and open Xterm
+8.  `cd /media/install/MM`
+9.  `chmod 755 install.sh` #may not be needed
+10.  `./install.sh -install`
+11.  `reboot`
 
 ## 🐭👾🖲️ Manual install instructions coming soon.
 0. Until here is a brief summary
