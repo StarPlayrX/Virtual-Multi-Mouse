@@ -1,5 +1,5 @@
 # 🐭👾🖲️ Virtual Multi-Mouse 1.1.2 🖲️👾🐭
-### Codename: Game Play
+### Project Game Play
 
 The best auto-config solution on the universe. Combines your spinner, trackball, mouse into a virtual multi-mouse! Written from the ground up using intelligent code. Designed for Batocera Linux for use with Emulation Station and RetroArch.
 
@@ -19,7 +19,10 @@ Virtual Multi-Mouse natively supports relative usb devices this includes mouse, 
 
 Known issue: There is a slow down when combining absolute Apple Magic Trackpads with relative mice. For this reaon absolute devices are ignored. We will revisit this.
 
-Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices. When a game starts, Batocera inserts its own virtual mouse-keyboard called "evmapy". It will always consume the next available slot. This is mostly harmless and usually gets added at the end, but if you remove any usb device, evampy on the next game will take the first available position. VMM is smart enough to deal with organized chaos. While we encourage leaving your usb devices alone when running Batoceara, VMM is king and has the ability to track and tame the elusive evmapy.
+Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices. When a game starts, Batocera inserts its own virtual mouse-keyboard called "evmapy". It will always consume the next available slot. This is mostly harmless and usually gets added at the end, but if you remove any usb device, evampy on the next game will take the first available position. VMM will keep an eye on evampy.
+
+## 🐭👾🖲️ Now with Game Play!
+While playing a game and you insert or remove a game controller, VMM no longer deactivate. Instead it will wait for the game to end and then it will re-check all the USB devices and then it will reactivate.
 
 Each version of Virtual Multi-Mouse gets better and better! Our goal is to have VMM learn the games you play, know what controls you need, run a setup that is compatible with your hardware. This is possible and we plan to get there.
 
