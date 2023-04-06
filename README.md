@@ -63,9 +63,11 @@ Each version of Virtual Multi-Mouse gets better and better! Our goal is to have 
 ## 🐭👾🖲️ Reference Material
 
 * https://github.com/KarsMulder/evsieve
+* https://github.com/kempniu/evmapy
+* https://opensource.com/article/18/11/udev
 * https://wiki.batocera.org/launch_a_script
 * https://forums.libretro.com/t/configuring-ra-for-multi-mouse-spinners-lightguns-tackballs/12619E
-* https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index/27
+* https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index
 
 ## 🐭👾🖲️ Coming Soon
 * Pacman package manager packages.
