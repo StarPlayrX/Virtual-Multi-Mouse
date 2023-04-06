@@ -20,7 +20,7 @@ Known issue: There is a slow down when combining absolute Apple Magic Trackpads 
 
 Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices. When a game starts, Batocera inserts its own virtual mouse-keyboard called "evmapy". It will always consume the next available slot. This is mostly harmless and usually gets added at the end, but if you remove any usb device, evampy on the next game will take the first available position. VMM is smart enough to deal with organized chaos. While we encourage leaving your usb devices alone when running Batoceara, VMM is king and has the ability to track and tame the elusive evmapy.
 
-Each version of Virtual Multi-Mouse gets better and better! Our goal is to have VMM learn the games you play, what controls they need, and set them accordingly based on your hardware. This is all possible and we plan to get there fast!
+Each version of Virtual Multi-Mouse gets better and better! Our goal is to have VMM learn the games you play, know what controls you need, run a setup that is compatible with your hardware. This is possible and we plan to get there.
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
