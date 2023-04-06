@@ -6,7 +6,7 @@ The best auto-config solution on the universe. Combines your spinner, trackball,
 
 Virtual Multi-Mouse auto configures trackball, spinner, mouse into one virtual device. Multi-Mouse works with Batocera v35 or later. Recently tested on v35, v36 and v37. Official lightgun support is coming soon! Future versions may learn what types of games you playing and setup your relative and absolute might accordingly. In other words, VMM will start to learn.
 
-Like Batocera, Virtual Multi-Mouse is made to just play! Need to change your mouse configuration? Within a flash VMM sets up the virtual mouse accordingly. All you need to do is install VMM, reboot and run a game! The software automatically determines the proper mouse config for player 1 arcade games.
+Like Batocera, Virtual Multi-Mouse is made to just play! Need to change your mouse configuration? Within a flash VMM sets up the virtual mouse accordingly. All you need to do is install VMM v1.1.0, reboot and run a game! The software automatically determines the proper mouse config for single player arcade games.
 
 Virtual Multi-Mouse uses sophisticated central intelligance gathering. VMM is programmed to be smart, very smart. Upon every fresh reboot, it does an awesome job reconfiguring all your mouse devices into one global mouse for player one. This software aims to be a zero-config-solution. We want VMM to be Auto-Magic!
 
