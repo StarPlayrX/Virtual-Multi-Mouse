@@ -15,7 +15,7 @@ Troubleshooting: If things are not working, try exiting your game and relaunchin
 
 At install, the Batocera.conf file is backed up. This is safegard incase something happens. Virtual Multi-Mouse sets the global index here for EmulationStation and RetroArch to configure and if for any reason that files becomes defunct, your games could stop working. This is even rare, but having a backup of this file with every install gives you peace of mind.
 
-Virtual Multi-Mouse natively supports relative usb devices this includes mouse, trackballs and spinners. Currently, we do not support devices which are multi-touch trackpads, lightguns and touch screens. These are absolute usb devices. Starting with 1.1.1 plan to start supporting abs devices in some fashion. In the future, we plan to include a configuration file that allows the user to determine which types of devices they want and allow more granual control but without having to remember a moving target like mouse indices or super long usb input names.
+Virtual Multi-Mouse natively supports relative usb devices this includes mouse, trackballs and spinners. Currently, we do not support devices which are multi-touch trackpads, lightguns and touch screens. These are absolute usb devices. More on this soon.
 
 Known issue: There is a slow down when combining absolute Apple Magic Trackpads with relative mice. For this reaon absolute devices are ignored. We will revisit this.
 
