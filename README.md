@@ -1,3 +1,6 @@
+## 🐭👾🖲️ Status update
+There is an issue combining relative mouse devices such as trackballs and spinners with absolute devices such as lightguns and multitouch trackpads. Because of this, Virtual Multi-Mouse development will begin to separate these two types of devices and each will have their own entry point. This means trackballs, mice and spinners will be combined as one virtual device and lightguns, and multitouch devices will be combined as a secondard virtual device. Will update on its progress.
+
 # 🐭👾🖲️ Virtual Multi-Mouse 1.1.2 🖲️👾🐭
 ### Project Game Play
 
