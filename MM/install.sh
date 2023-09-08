@@ -69,7 +69,7 @@ case "$1" in
         echo restarting...
         reboot
         ;;
-      *)
+    *)
         echo ""
         echo "Usage: $0  -install  -uninstall  -restart"
         echo ""
