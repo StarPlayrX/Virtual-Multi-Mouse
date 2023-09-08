@@ -43,12 +43,23 @@ Each version of Virtual Multi-Mouse gets better and better! Our goal is to have 
 11.  `reboot`
 
 ## 🐭👾🖲️ Manual install instructions coming soon.
-0. Until here is a brief summary
+0. Until then, here is a brief summary for Batocera v37 and earlier
 1. mm.sh goes in /userdata/system/scripts/ needs `chmod +x` or `755` rights
 2. multimouse.sh and custom.sh goes in /userdata/system/ needs `chmod +x` or `755` rights
 3. go to terminal, `cd /userdata/system`
 4. `./custom.sh` start
-5  or `reboot`
+5. or `reboot`
+
+## 🐭👾🖲️ Manual install instructions for Batocera v38 and later, execute in terminal:
+
+```
+cp mm.sh /userdata/system/scripts/mm.sh
+cp multimouse.sh /userdata/system/multimouse.sh
+cp custom.sh /userdata/system/services/vmm
+chmod 755 /userdata/system/scripts/mm.sh /userdata/system/multimouse.sh /userdata/system/services/vmm
+batocera-services enable vmm
+batocera-services start vmm
+```
 
 ## 🐭👾🖲️ Want to Leave the Multi-Verse?
 
