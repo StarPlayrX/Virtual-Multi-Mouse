@@ -31,47 +31,47 @@ echo
 case "$1" in
     -install)
         echo install
-		echo making script directory
+        echo making script directory
 
         mkdir $dir$scripts
 
-		echo removing previous files
+        echo removing previous files
         rm -f $dir$custom
-		rm -f $dir$multi
-		rm -f $dir$scripts$mm
+        rm -f $dir$multi
+        rm -f $dir$scripts$mm
         rm -f $dir$backup
-		
+
         echo copying files
         cp ./$custom $dir$custom
         cp ./$multi $dir$multi
         cp ./$mm $dir$scripts$mm
-        
+
         #Backup batocera.conf
         cp $dir$bat $dir$backup
 
-		echo updating permissions
-		chmod 755 $dir$custom
-		chmod 755 $dir$multi
-		chmod 755 $dir$scripts$mm
+        echo updating permissions
+        chmod 755 $dir$custom
+        chmod 755 $dir$multi
+        chmod 755 $dir$scripts$mm
 
-		echo install complete
+        echo install complete
         ;;
     -uninstall)
-		echo uninstalling files
+        echo uninstalling files
         rm -f $dir$custom
-		rm -f $dir$multi
-		rm -f $dir$scripts$mm
+        rm -f $dir$multi
+        rm -f $dir$scripts$mm
         rm -f $dir$backup
 
-		echo uninstall complete
+        echo uninstall complete
         ;;
     -restart)
-		echo restarting...
+        echo restarting...
         reboot
         ;;
       *)
-		echo ""
+        echo ""
         echo "Usage: $0  -install  -uninstall  -restart"
-		echo ""
+        echo ""
       ;;
 esac
