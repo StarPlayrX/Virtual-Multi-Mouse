@@ -84,6 +84,3 @@ batocera-services start vmm
 * https://wiki.batocera.org/launch_a_script
 * https://forums.libretro.com/t/configuring-ra-for-multi-mouse-spinners-lightguns-tackballs/12619E
 * https://forum.batocera.org/d/6652-being-able-to-use-trackball-and-spinner-using-per-mouse-index
-
-## 🐭👾🖲️ To Do
-* Pacman package manager packages.
