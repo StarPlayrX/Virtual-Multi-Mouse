@@ -1,26 +1,21 @@
-## 🐭👾🖲️ Status update
-There is an issue combining relative mouse devices such as trackballs and spinners with absolute devices such as lightguns and multitouch trackpads. Because of this, Virtual Multi-Mouse development will begin to separate these two types of devices. This means trackballs, mice and spinners will be combined as one virtual device. In the future if feasible, lightguns, trackpads andv other multitouch devices will be combined as a secondard virtual device. Currently no abs devices are supported at this time.
-
 # 🐭👾🖲️ Virtual Multi-Mouse 1.1.2 🖲️👾🐭
 ### Project Game Play
 
-The best auto-config solution on the universe. Combines your spinner, trackball, mouse into a virtual multi-mouse! Written from the ground up using intelligent code. Designed for Batocera Linux for use with Emulation Station and RetroArch.
+VMM, combines your spinner, trackball, mouse into a virtual multi-mouse! Written from the ground up, designed for Batocera Linux for use with Emulation Station and RetroArch.
 
 ## 🐭👾🖲️ Get Ready Player One!
 
-Virtual Multi-Mouse auto configures trackball, spinner, mouse into one virtual device. Multi-Mouse works with Batocera v35 or later. Recently tested on v35, v36 and v37. Future versions may learn what types of games you playing and setup your relative and absolute might accordingly. In other words, VMM will start to learn.
+Virtual Multi-Mouse auto configures trackball, spinner, mouse into one virtual device. Multi-Mouse works with Batocera v35 or later. Recently tested on v35, v36 and v37.
 
-Like Batocera, Virtual Multi-Mouse is made to just play! Need to change your mouse configuration? Within a flash VMM sets up the virtual mouse accordingly. All you need to do is install VMM v1.1.0, reboot and run a game! The software automatically determines the proper mouse config for single player arcade games.
-
-Virtual Multi-Mouse uses sophisticated central intelligance gathering. VMM is programmed to be smart, very smart. Upon every fresh reboot, it does an awesome job reconfiguring all your mouse devices into one global mouse for player one. This software aims to be a zero-config-solution. We want VMM to be Auto-Magic!
+Like Batocera, Virtual Multi-Mouse is made to just play! Need to change your mouse configuration? Within a flash VMM sets up the virtual mouse accordingly. All you need to do is install VMM v1.1.2, reboot and run a game! The software automatically determines the proper mouse config for single player arcade games.
 
 Troubleshooting: If things are not working, try exiting your game and relaunching it. Sometimes VMM needs a jump start. If your mouse controllers are still not working, simply reboot Batocera. Still having trouble? Feel free to post an issue. This is getting more rare as VMM can anticipate problems.
 
 At install, the Batocera.conf file is backed up. This is safegard incase something happens. Virtual Multi-Mouse sets the global index here for EmulationStation and RetroArch to configure and if for any reason that files becomes defunct, your games could stop working. This is even rare, but having a backup of this file with every install gives you peace of mind.
 
-Virtual Multi-Mouse natively supports relative usb devices this includes mouse, trackballs and spinners. Currently, we do not support devices which are multi-touch trackpads, lightguns and touch screens. These are absolute usb devices. More on this soon. There is a slow down when combining absolute Apple Magic Trackpads with relative mice. For this one reason absolute devices are ignored.
+Virtual Multi-Mouse natively supports relative usb devices this includes mouse, trackballs and spinners. Currently, we do not support devices which are multi-touch trackpads, lightguns and touch screens. These are absolute usb devices. There is a slow down when combining absolute Apple Magic Trackpads with relative mice. For this one reason absolute devices are ignored.
 
-Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices. When a game starts, Batocera inserts its own virtual mouse-keyboard called "evmapy". It will always consume the next available slot. This is mostly harmless and usually gets added at the end, but if you remove any usb device, evampy on the next game will take the first available position. VMM keeps an eye on evampy whereabouts.
+Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices. When a game starts, Batocera inserts its own virtual mouse-keyboard called "evmapy". It will always consume the next available slot. This is mostly harmless and usually gets added at the end, but if you remove any usb device, evampy on the next game will take the first available position. VMM keeps an eye on evampy's whereabouts.
 
 ## 🐭👾🖲️ Now with Game Play!
 While playing a game and you insert or remove a game controller, VMM no longer deactivate. Instead it will wait for the game to end and then it will re-check all the USB devices and then it will reactivate.
