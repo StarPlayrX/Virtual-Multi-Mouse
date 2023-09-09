@@ -1,5 +1,4 @@
 # 🐭👾🖲️ Virtual Multi-Mouse 1.1.2 🖲️👾🐭
-### Project Game Play
 
 VMM, combines your spinner, trackball, mouse into a virtual multi-mouse! Written from the ground up, designed for Batocera Linux for use with Emulation Station and RetroArch.
 
