@@ -25,7 +25,7 @@ While playing a game and you insert or remove a game controller, VMM no longer d
 2.  Navigate to /Applications and open Xterm
 
 ```
-mkdir curl -sL https://github.com/StarPLayrX/Virtual-Multi-Mouse/archive/refs/heads/main.zip -o vmm.zip
+curl -sL https://github.com/StarPLayrX/Virtual-Multi-Mouse/archive/refs/heads/main.zip -o vmm.zip
 unzip vmm.zip
 cd Virtual-Multi-Mouse-main/MM
 chmod 755 install.sh
