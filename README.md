@@ -6,18 +6,11 @@ VMM, combines your spinner, trackball, mouse into a virtual multi-mouse! VMM is 
 
 Virtual Multi-Mouse auto configures trackball, spinner, mouse into one virtual device. Multi-Mouse works with Batocera v35 or later. Recently tested on v35, v36 and v37. See manual install instructions for v38.
 
-Like Batocera, Virtual Multi-Mouse is made to let you play. All you need to do is install VMM v1.1.3, reboot and run a game! The software automatically determines the proper mouse configuration for 1 up games.
-
-Troubleshooting: If things are not working, try exiting your game and relaunching it. Sometimes VMM needs a jump start. Still having trouble? Feel free to post an issue.
-
 At install, the Batocera.conf file is backed up. This is safegard incase something happens. Virtual Multi-Mouse sets the global index here for EmulationStation and RetroArch to configure and if for any reason that files becomes defunct, your games could stop working. This is even rare, but having a backup of this file with every install gives you peace of mind.
 
 Virtual Multi-Mouse natively supports relative usb devices this includes mouse, trackballs and spinners. Currently, we do not support devices which are multi-touch trackpads, lightguns and touch screens. These are absolute usb devices. There is a slow down when combining absolute Apple Magic Trackpads with relative mice. For this one reason absolute devices are ignored.
 
 Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices. When a game starts, Batocera inserts its own virtual mouse-keyboard called "evmapy". It will always consume the next available slot. This is mostly harmless and usually gets added at the end, but if you remove any usb device, evampy on the next game will take the first available position. VMM keeps an eye on evampy's whereabouts.
-
-## 🐭👾🖲️ Now with Game Play!
-While playing a game and you insert or remove a game controller, VMM no longer deactivates. Instead it will wait for the game to end and then it will re-check all the USB devices and reactivate.
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
