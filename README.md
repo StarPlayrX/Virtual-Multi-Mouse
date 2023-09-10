@@ -6,9 +6,9 @@ VMM, combines your spinner, trackball, mouse into a virtual multi-mouse! Written
 
 Virtual Multi-Mouse auto configures trackball, spinner, mouse into one virtual device. Multi-Mouse works with Batocera v35 or later. Recently tested on v35, v36 and v37. See manual install instructions for v38.
 
-Like Batocera, Virtual Multi-Mouse is made to just play! Need to change your mouse configuration? Within a flash VMM sets up the virtual mouse accordingly. All you need to do is install VMM v1.1.2, reboot and run a game! The software automatically determines the proper mouse config for single player arcade games.
+Like Batocera, Virtual Multi-Mouse is made to let you play. All you need to do is install VMM v1.1.2, reboot and run a game! The software automatically determines the proper mouse configuration for 1 up games.
 
-Troubleshooting: If things are not working, try exiting your game and relaunching it. Sometimes VMM needs a jump start. If your mouse controllers are still not working, simply reboot Batocera. Still having trouble? Feel free to post an issue. This is getting more rare as VMM can anticipate problems.
+Troubleshooting: If things are not working, try exiting your game and relaunching it. Sometimes VMM needs a jump start. Still having trouble? Feel free to post an issue.
 
 At install, the Batocera.conf file is backed up. This is safegard incase something happens. Virtual Multi-Mouse sets the global index here for EmulationStation and RetroArch to configure and if for any reason that files becomes defunct, your games could stop working. This is even rare, but having a backup of this file with every install gives you peace of mind.
 
