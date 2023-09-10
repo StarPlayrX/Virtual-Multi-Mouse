@@ -21,28 +21,19 @@ While playing a game and you insert or remove a game controller, VMM no longer d
 
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
-0.  If you have smb:// file sharing working, you can copy files over instead of sneaker net (instructions to follow)
-1.  you can curl this repo as well (will post instructions soon)
-2.  Insert a thumb drive to a Mac or PC 
-3.  Format it using ExFat, name the disk `install`
-4.  Copy the `MM folder` to the thumb drive
-5.  Insert the thumb drive to your Batocera Linux box
-6.  Type `F1` to enter File Manager
-7.  Navigate to /Applications and open Xterm
-8.  `cd /media/install/MM`
-9.  `chmod 755 install.sh` #may not be needed
-10.  `./install.sh -install`
-11.  `reboot`
-
-## 🐭👾🖲️ Manual install instructions coming soon.
-0. Until then, here is a brief summary for Batocera v37 and earlier
-1. mm.sh goes in /userdata/system/scripts/ needs `chmod +x` or `755` rights
-2. multimouse.sh and custom.sh goes in /userdata/system/ needs `chmod +x` or `755` rights
-3. go to terminal, `cd /userdata/system`
-4. `./custom.sh` start
-5. or `reboot`
+1.  From Batocera, type `F1` function key to enter the File Manager
+2.  Navigate to /Applications and open Xterm
+3.  `mkdir curl -sL https://github.com/StarPLayrX/Virtual-Multi-Mouse/archive/refs/heads/main.zip -o vmm.zip`
+4.  `unzip vmm.zip`
+5.  `cd Virtual-Multi-Mouse-main/MM`
+6.  `chmod 755 install.sh`
+7.  `./install.sh -install`
+8.  `./install.sh -reboot`
 
 ## 🐭👾🖲️ Manual install instructions for Batocera v38 and later, execute in terminal:
+
+1.  From Batocera, type `F1` function key to enter the File Manager
+2.  Navigate to /Applications and open Xterm
 
 ```
 cp mm.sh /userdata/system/scripts/mm.sh
