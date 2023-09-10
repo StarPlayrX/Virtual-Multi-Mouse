@@ -19,8 +19,6 @@ Virtual Multi-Mouse reviews all mouse indices upon startup. This includes its ow
 ## 🐭👾🖲️ Now with Game Play!
 While playing a game and you insert or remove a game controller, VMM no longer deactivates. Instead it will wait for the game to end and then it will re-check all the USB devices and reactivate.
 
-Each version of Virtual Multi-Mouse gets better and better! Our goal is to have VMM learn the games you play, know what controls you need, run a setup that is compatible with your hardware. This is possible and we plan to get there.
-
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
 0.  If you have smb:// file sharing working, you can copy files over instead of sneaker net (instructions to follow)
