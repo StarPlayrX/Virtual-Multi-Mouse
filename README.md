@@ -4,12 +4,6 @@ VMM, combines your spinner, trackball, mouse into a virtual multi-mouse! VMM is 
 
 This software auto configures trackball, spinner, mouse into one virtual device. Multi-Mouse works with Batocera v35 or later. Recently tested on v35, v36 and v37. See manual install instructions for v38.
 
-At install, the Batocera.conf file is backed up. VMM sets the global index on the Batocera.conf file for EmulationStation and RetroArch to configure.
-
-Virtual Multi-Mouse natively supports relative usb devices this includes mouse, trackballs and spinners. Currently, we do not support devices which are multi-touch trackpads, lightguns and touch screens. These are absolute usb devices. There is a slow down when combining absolute Apple Magic Trackpads with relative mice. For this one reason absolute devices are ignored.
-
-VMM reviews all mouse indices upon startup. This includes its own index, all relative devices, all absolute devices. When a game starts, Batocera inserts its own virtual mouse-keyboard called "evmapy". It will always consume the next available slot. This is mostly harmless and usually gets added at the end, but if you remove any usb device, evampy on the next game will take the first available position.
-
 ## 🐭👾🖲️ Ready to Enter the Multi-Verse?
 
 1.  From Batocera, type `F1` function key to enter the File Manager
