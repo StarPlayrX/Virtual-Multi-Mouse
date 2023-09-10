@@ -30,7 +30,17 @@ unzip vmm.zip
 cd Virtual-Multi-Mouse-main/MM
 chmod 755 install.sh
 ./install.sh -install
-./install.sh -reboot
+./install.sh -restart
+```
+
+## 🐭👾🖲️ Want to Leave the Multi-Verse?
+
+2.  Type `F1` to enter File Manager
+3.  Navigate to /Applications and open Xterm
+```
+cd Virtual-Multi-Mouse-main/MM
+./install.sh -uninstall
+./installsh. -reboot
 ```
 
 ## 🐭👾🖲️ Manual install instructions for Batocera v38 and later, execute in terminal:
@@ -46,15 +56,6 @@ chmod 755 /userdata/system/scripts/mm.sh /userdata/system/multimouse.sh /userdat
 batocera-services enable vmm
 batocera-services start vmm
 ```
-
-## 🐭👾🖲️ Want to Leave the Multi-Verse?
-
-1.  Insert the thumb drive to your Batocera Linux box
-2.  Type `F1` to enter File Manager
-3.  Navigate to /Applications and open Xterm
-4.  `cd /media/install/MM`
-5.  `./install.sh -uninstall`
-6.  `reboot`
 
 ## 🐭👾🖲️ Credits
 * Virtual Multi-Mouse developed by StarPlayrX aka Todd Bruss
