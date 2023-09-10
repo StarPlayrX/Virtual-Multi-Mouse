@@ -23,12 +23,15 @@ While playing a game and you insert or remove a game controller, VMM no longer d
 
 1.  From Batocera, type `F1` function key to enter the File Manager
 2.  Navigate to /Applications and open Xterm
-3.  `mkdir curl -sL https://github.com/StarPLayrX/Virtual-Multi-Mouse/archive/refs/heads/main.zip -o vmm.zip`
-4.  `unzip vmm.zip`
-5.  `cd Virtual-Multi-Mouse-main/MM`
-6.  `chmod 755 install.sh`
-7.  `./install.sh -install`
-8.  `./install.sh -reboot`
+
+```
+mkdir curl -sL https://github.com/StarPLayrX/Virtual-Multi-Mouse/archive/refs/heads/main.zip -o vmm.zip
+unzip vmm.zip
+cd Virtual-Multi-Mouse-main/MM
+chmod 755 install.sh
+./install.sh -install
+./install.sh -reboot
+```
 
 ## 🐭👾🖲️ Manual install instructions for Batocera v38 and later, execute in terminal:
 
