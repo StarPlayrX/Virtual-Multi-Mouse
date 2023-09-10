@@ -52,9 +52,8 @@ batocera-services start vmm
 
 ## 🐭👾🖲️ Credits
 * Virtual Multi-Mouse developed by StarPlayrX aka Todd Bruss
-* KarsMulder for writing Evsieve, simply amazing work
-* Special thanks to the Batocera team for giving me a renewed interest in Linux
-* Shout out to RetroArch, EmulationStation, Recalbox and MAME teams
+* Installer service update for Batocera 38 by n2qz
+* KarsMulder for writing evsieve, simply amazing work
 
 ## 🐭👾🖲️ Reference Material
 
