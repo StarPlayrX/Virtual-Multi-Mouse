@@ -2,6 +2,8 @@
 
 VMM has been discontinued and is not longer in development by its original author. I will accept merge requests from contributors and those are welcome. You are welcome to fork this repo and make any bug fixes that you desire.
 
+The source code is intact and it is not without bugs. This repo will remain online. Thank you for your support. 
+
 VMM, combines your spinner, trackball, mouse into a virtual multi-mouse! VMM is designed for Batocera Linux for use with Emulation Station and RetroArch.
 
 This software auto configures trackball, spinner, mouse into one virtual device. Multi-Mouse works with Batocera v35 or later. Recently tested on Batocera v35, v36 and v37. 1.1.3 adds service support for beta 38.
