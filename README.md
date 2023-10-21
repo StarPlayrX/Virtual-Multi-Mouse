@@ -1,8 +1,4 @@
-VMM has been discontinued and is not longer in development by its original author. I will accept merge requests from contributors and those are welcome. You are welcome to fork this repo and make any bug fixes that you desire.
-
-The source code is intact and it is not without bugs. This repo will remain online. Thank you for your support. 
-
-I am not longer using Batocera Linux in my arcade setups.
+VMM has been discontinued and is not longer in development by its original author. I will accept merge requests from contributors and those are welcome. Thank you for your support and I wish the next set of authors all the best on this endevour.
 
 # 🐭👾🖲️ Virtual Multi-Mouse 1.1.3
 
