@@ -1,4 +1,4 @@
-VMM has been discontinued and is not longer in development by its original author. I will accept merge requests from contributors and those are welcome. Thank you for your support and I wish the next set of authors all the best on this endevour.
+VMM has been discontinued and is no longer in development by its original author. I will accept merge requests from contributors and those are welcome. Thank you for your support and I wish the next set of authors all the best on this endevour.
 
 # 🐭👾🖲️ Virtual Multi-Mouse 1.1.3
 
